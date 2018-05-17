@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>.....[Evaluación HTML].....</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>Evaluación de Radio Boton</div>
+        <script type="text/javascript">
+            function cambiarColorFondo() {
+                var vRBtnTenis, vColorFondo;
+                var vTxtArea;
+//                 alert("Después de la declaracion de variables");
+                vRBtnTenis = document.forms[0].vCopa.value;
+//                alert("Después de la declaracion de variables" + vRBtnTenis);
+                if (vRBtnTenis==="1"){
+                    vColorFondo = "#CC0000"; // Rojo
+                }else if (vRBtnTenis==="2"){
+                    vColorFondo = "#CCCCCC"; // Plomo
+                }else if (vRBtnTenis==="3"){
+                    vColorFondo = "#FF00FF"; // Rosado
+                }else if (vRBtnTenis==="4"){
+                    vColorFondo = "#000099"; // Azul
+                }else if (vRBtnTenis==="5"){
+                    vColorFondo = "#0080FF";  //Celeste
+                }else if (vRBtnTenis==="6"){
+                    vColorFondo = "#FFFF00"; // Amarillo
+                }else if (vRBtnTenis==="7"){
+                    vColorFondo = "#66334D";
+                }else if (vRBtnTenis==="8"){
+                    vColorFondo = "#9999CC";
+                }else if (vRBtnTenis==="9"){
+                    vColorFondo = "#999966";
+                }
+                
+                vTxtArea = document.getElementById('vTxtDescripcion');
+                vTxtArea.style.background=vColorFondo;
+                document.getElementById('vTxtDescripcion').value = mensajeArea(vRBtnTenis);
+            }
+            
+            function validarFormulario(){
+                var vForm = document.forms[0];
+                var vSiNo = "N";
+                
+                for (var i=0; i < vForm.vCopa.length; i++){
+                    if (vForm.vCopa.checked){
+                        vSiNo = "S";
+                        break;
+                    }
+                }
+                if (vSiNo === "N"){
+                    alert("Debe seleccionar un tipo de campeonato");
+                }
+            }
+            
+            function mensajeArea(pvRBtnTenis){
+                var vMensaje = '';;
+
+                if (pvRBtnTenis==="1"){
+                    vMensaje = "La Copa Davis es una competición internacional de tenis, organizada por la Federación Internacional de Tenis (ITF). A diferencia de la mayoría de los torneos de tenis internacionales, en la Copa Davis no participan jugadores a título individual, sino equipos nacionales compuestos por diversos jugadores designados por su federación nacional deportiva. La Copa Davis, disputada desde 1900, es un torneo masculino realizado anualmente, siendo la Copa Fed su equivalente para tenistas femeninas. Es el mayor torneo deportivo anual contando con 130 equipos nacionales diferentes";
+                }else if (pvRBtnTenis==="2"){
+                    vMensaje = "La Copa Fed, llamada Copa Federación hasta 1995, es una de las competiciones más importantes del tenis femenino. Se disputa entre equipos nacionales, siendo una competición similar a la Copa Davis. Lleva disputándose desde 1963. La Fed Cup se disputa anualmente entre 99 países, en varios grupos y rondas. Cada ronda entre dos equipos se juega a cuatro partidos individuales y uno de dobles";
+                }else if (pvRBtnTenis==="3"){
+                    vMensaje = "Los ATP World Tour Masters 1000 son una serie de nueve torneos de tenis que forman parte de la Asociación de Tenistas Profesionales (ATP), celebrado anualmente durante todo el año en Europa, Norteamérica y (desde 2009) Asia. Son los torneos más importantes después de los Grand Slam, siendo así para los mejores jugadores masculinos en el circuito profesional la serie que constituye los torneos más prestigiosos del tenis masculino";
+                }else if (pvRBtnTenis==="4"){
+                    vMensaje = "El ATP World Tour Finals (en español, Finales del Circuito Mundial ATP anteriormente Tennis Masters Cup, también llamada Copa Masters, Copa de Maestros1​ o simplemente Masters Torneo de Maestros) es un torneo de tenis realizado anualmente sobre pista dura al final de cada temporada, con la participación de los ocho jugadores mejor ubicados en la clasificación mundial.";
+                }else if (pvRBtnTenis==="5"){
+                    vMensaje = "Los ATP Challenger Tour (en español, Circuito Desafío ATP) son una serie de torneos de tenis de la Asociación de Tenistas Profesionales (ATP). Corresponden a la categoría de menor rango dentro de los torneos gobernados por la ATP y no son contados como títulos. En general, sirven para que los jugadores emergentes sumen puntos para intentar llegar a las clasificaciones de torneos más importantes. Generalmente, en los circuitos de Challengers, participan jugadores de ranking inferior al puesto 70 y reparten entre 50 y 150 mil dólares en premios. Normalmente también se les da alojamiento y dietas.";
+                }else if (pvRBtnTenis==="6"){
+                    vMensaje = "El Grand Slam de tenis está constituido por los cuatro torneos mayores del circuito internacional organizados por la Federación Internacional de Tenis, siendo los siguientes: Bandera de Australia Abierto de Australia - pista de tenis dura Bandera de Francia Torneo de Roland Garros - polvo de ladrillo Bandera de Reino Unido Campeonato de Wimbledon - césped Bandera de Estados Unidos Abierto de Estados Unidos - pista de tenis dura. Estos cuatro torneos se disputan anualmente al mejor de 5 sets cada partido en categoría masculina, con un cuadro de 128 jugadores, a diferencia de los ATP World Tour Masters 1000, que se disputan al mejor de 3 sets, con un cuadro de 94 o 56 jugadores, y al mejor de 3 sets en categoría femenina (también con un cuadro de 128 jugadoras)";
+                }else if (pvRBtnTenis==="7"){
+                    vMensaje = "";
+                }else if (pvRBtnTenis==="8"){
+                    vMensaje = "La ATP World Tour 500 (antes llamada International Series Gold) es una serie de torneos de tenis que forman parte del circuito ATP. Esta serie de torneos se caracteriza por repartir entre US$ 690.000 Y US$ 1.426.250. La distribución de puntos son: 500 campeón, 300 finalista, 180 semifinalistas, 90 cuartos de final, 45 segunda ronda y 10 a la primera ronda.";
+                }else if (pvRBtnTenis==="9"){
+                    vMensaje = "Los ATP World Tour 250 son una serie de torneos de tenis masculino que forman parte del calendario de la Asociación de Tenistas Profesionales. Los torneos de esta serie ofrecen premios de entre $370.000 a $1.000.000 y constituyen la última categoría dentro de los torneos ATP, por detrás de los ATP World Tour 500. El ganador de cada uno de estos torneos adquiere 250 puntos para su cuenta en el ranking de la ATP. Es hasta esta categoría que la ATP considera los torneos para contarlos en el palmarés de los jugadores";
+                }
+                return vMensaje;
+            }
+        </script>
+        <form id="idFormRadioButton">
+            <table >
+                <tr><td><input type="radio" name="vCopa" value="1" onclick="cambiarColorFondo()">Copa Davis</td>
+                    <td rowspan="9"><textarea id="vTxtDescripcion" rows="15" cols="45">asd
+                        asd
+                        asd
+                        sad
+                        s
+                        sd
+                        das
+                        asd
+                        ds
+                        d
+                        d
+                        da
+                        d
+                        sda
+    asd
+    asd
+    da
+    d
+    asd
+    s
+
+                        dsa
+                        </textarea></td>
+                </tr>
+                <tr><td><input type="radio" name="vCopa" value="2" onclick="cambiarColorFondo()">Copa Federacion</td>
+                </tr>
+                <tr><td><input type="radio" name="vCopa" value="3" onclick="cambiarColorFondo()">ATP Masters Series o ATP Wold Tour Master</td>
+                </tr>
+                <tr><td><input type="radio" name="vCopa" value="4" onclick="cambiarColorFondo()">Barclays ATP o Copa Masters</td>
+                </tr>
+                <tr><td><input type="radio" name="vCopa" value="5" onclick="cambiarColorFondo()">ATP Challenger Series</td>
+                </tr>
+                <tr><td><input type="radio" name="vCopa" value="6" onclick="cambiarColorFondo()">Grand Slam</td>
+                </tr>
+                <tr><td><input type="radio" name="vCopa" value="7" onclick="cambiarColorFondo()">ATP World Tour Finals</td>
+                </tr>
+                <tr><td><input type="radio" name="vCopa" value="8" onclick="cambiarColorFondo()">ATP World Tour 500</td>
+                </tr>
+                <tr><td><input type="radio" name="vCopa" value="9" onclick="cambiarColorFondo()">ATP World Tour 250</td>
+                </tr>
+            </table>
+            <input type="button" value="Mostrar" onclick='validarFormulario()' >
+        </form>
+    </body>
+</html>
