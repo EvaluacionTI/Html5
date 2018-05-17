@@ -1,0 +1,28 @@
+/* 
+    Created on : 03/03/2017, 08:41:01 AM
+    Author     : ALDV
+*/
+body{
+    background-color: lightblue;
+}
+
+h1{
+    background-color: orange;
+    text-align: center;
+}
+
+h5{
+    background-color: wheat;
+    text-align: center;
+}
+
+h6{
+    background-color: yellowgreen;
+    text-align: center;
+}
+
+p{
+    background-color: #FFFF00;
+    font-family: arial verdana;
+    font-size: 20px;
+}

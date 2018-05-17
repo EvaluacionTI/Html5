@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>.....[ Evaluación HTML5 - CSS3 - JS ].....</title>
+        <link type="text/css" href="../CSS/70-JavaScript/css0101v01BodyH1P.css" rel="stylesheet"/>
+        
+        <script>
+            /**
+             * Función que solo permite la entrada de numeros, un signo negativo y
+             * un punto para separar los decimales
+             */
+            function soloNumeros(e)
+            {
+                alert(e);
+                // capturamos la tecla pulsada
+                var teclaPulsada=window.event ? window.event.keyCode:e.which;
+                alert(window.event);
+                alert(window.event.keyCode);
+                alert(teclaPulsada);
+                // capturamos el contenido del input
+                var valor=document.getElementById("inputNumero").value;
+                alert(valor);
+                // 45 = tecla simbolo menos (-)
+                // Si el usuario pulsa la tecla menos, y no se ha pulsado anteriormente
+                // Modificamos el contenido del mismo añadiendo el simbolo menos al inicio
+                if(teclaPulsada===45 && valor.indexOf("-")===-1)
+                {
+                    document.getElementById("inputNumero").value="-"+valor;
+                }
+
+                // 13 = tecla enter
+                // 46 = tecla punto (.)
+                // Si el usuario pulsa la tecla enter o el punto y no hay ningun otro punto
+                if(teclaPulsada===13 || (teclaPulsada===46 && valor.indexOf(".")===-1))
+                {
+                    return true;
+                }
+
+                // devolvemos true o false dependiendo de si es numerico o no
+                return /\d/.test(String.fromCharCode(teclaPulsada));
+            }
+        </script>
+    </head>
+
+    <body>
+        <h1>Validar sólo números</h1>
+
+        <p>Esta función solo permite la entrada de números, el signo de menos (-), 
+           y un único punto para los decimales</p>
+
+        <form action="#">
+            <input id="inputNumero" type="text" name="txtNumero" onkeypress="return soloNumeros(event);">
+            <input type="submit" value="Enviar">
+        </form>
+
+    </body>
+</html>

@@ -1,0 +1,117 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 03/03/2017, 08:41:01 AM
+    Author     : ALEDIA
+*/
+/*
+    Question 03: Capitalize
+*/
+p{
+    /*      Negrita
+            Capitaliza o convierte en mayuscula la primera letra de cada palabra del párrafo que está en minuscula
+            Mayúscula
+            Tamaño
+    */
+    /*font-weight: bold; */ 
+    text-transform: capitalize;
+    /*text-transform: uppercase;
+    font-size: 100px;*/
+   font-style: italic;
+   font-weight: bold;
+   font-size: 15px;
+}
+/*
+    Question 04: No underlina a ningun palabra
+*/
+a{
+    /*
+        undeline hidden; NO EXITE
+        text-decoration: no-underline; NO EXISTE
+        decoration:hidden; NO EXISTE
+    
+        text-decoration: none; SIN SUBRAYADO
+        text-decoration: underline; SURAYADO 
+        text-decoration: overline; SUBRAYADO ENCIMA DE LAS LETRAS
+        text-decoration: line-through; SUBRAYADO EN MEDIO O TACHADO
+        text-decoration: blink;
+    
+    */
+    text-decoration: none;
+    /*text-decoration: underline;*/
+    /*text-decoration: overline;*/
+    /*text-decoration: line-through;*/
+    /*text-decoration: blink;*/
+}
+
+/*
+    Question 05:  Tamaño de texto
+*/
+h1{
+    /*
+        text-style: NO EXISTE
+        text-size: NO EXISTE
+        font-style: NO EXISTE
+    */
+    /*font-size: medium;
+    font-size: small;
+    font-size: smaller;*/
+    font-size: x-large;
+    /*font-size: x-small;
+    font-size: xx-large;
+    font-size: xx-small;*/
+}
+/*
+    Question 06: Color de letra
+*/
+h2{
+    /*
+        font-color: NO EXISTE
+        fgcolor: NO EXISTE
+        text-color: NO EXISTE
+    */
+    /*color: yellowgreen;*/
+    color: rgb(0,255,0);
+}
+
+h3{
+
+    color: yellowgreen !important;
+    color: blue;
+}
+
+h4{
+    font-family: cursive;
+    font-variant: contextual;
+}
+
+h6{
+    color: orange;
+    font-family: cursive;
+    font-variant: contextual;
+}
+div{
+/*
+    background-color: gray;
+    background-position: 40% 50%;
+    background-size: 10em 10em;
+    background-repeat: round;
+    background-clip: border-box;
+    background-origin: border-box;
+    background-attachment: fixed;
+    background-image: url(../Imagen/lienzoAsombro.png) Si pone una letra en el div visualiza la imagen sino nada
+
+*/
+    background-color: gray;
+    background-position: 40% 50%;
+    background-size: 10em 10em;
+    background-repeat: round;
+    background-clip: border-box;
+    background-origin: border-box;
+    background-attachment: scroll;
+    background-image: url(../Imagen/lienzoAsombro.png)
+
+}

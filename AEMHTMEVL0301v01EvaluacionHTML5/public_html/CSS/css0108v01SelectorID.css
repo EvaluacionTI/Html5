@@ -1,0 +1,92 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 07/03/2017, 04:17:01 PM
+    Author     : ALEDIA
+*/
+/* =====[ SELECTORES DE TIPO ETIQUETA]=====*/
+body{
+    background-color: orange; 
+    background-size: auto
+}
+
+h1{
+    color: blue;
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2{
+    color: #00FF00;
+}
+
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.2em; }
+
+p {
+    color: black;
+}
+
+p span{
+    color: red;
+}
+/* =====[ SELECTORES DESCENDENTE]=====*/
+/* El estilo se aplica a todos los elementos "p", "a", "span" y "em" */
+p, a, span, em { text-decoration: underline; }
+ 
+/* El estilo se aplica solo a los elementos "em" que se
+   encuentran dentro de "p a span" */
+p a span em { text-decoration: underline; }
+
+div{
+    background-color: #FF00FF;
+}
+/* =====[ SELECTORES DE CLASS]=====*/
+.destacado{
+    color:#00FF00;
+}
+
+.aviso{
+    padding: 0.5em;
+    border: 1px solid #CC0000;
+    background: #f6feda;
+}
+
+.error{
+    background-color: #FF0000;  /* Rojo */
+    color: #FFFF00; /* Amarillo */
+    font-weight: normal ;
+    font-family: verdana;
+}
+
+/* Todos los elementos de tipo "p" con atributo class="aviso" */
+p.publicidad { 
+    background: blue;
+}
+ 
+/* Todos los elementos con atributo class="aviso" que estén dentro
+   de cualquier elemento de tipo "p" */
+p .mensaje { 
+    background-color: yellow;
+}
+ 
+/* Todos los elementos "p" de la página y todos los elementos con
+   atributo class="aviso" de la página */
+p, .colegio { 
+    color: #286af0;
+}
+
+/* =====[ SELECTORES DE ID]=====*/
+
+#titulo{
+    color:#FFFFFF; /* Blanco */
+    background-color: gray;
+}
+
+p#subtitulo{
+    background-color: darkorange;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>.....[ Evaluación HTML5 - CSS3 - JS ].....</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link type="text/css" rel="stylesheet" href="../CSS/70-JavaScript/css0101v01BodyH1P.css"/>
+    </head>
+    
+    <body>
+        <h6>Validar Números Enteros</h6>
+        
+        <label> Número de Motor:
+        <input pattern="[0-9]{5}[A-Z]{3}" name="txtNroMotor"
+               title="Un número de motor es 5 dígito seguido por 3 letras mayúsculas."/>
+       </label>
+        <br>
+        N° Trabajadores <input id="idEntero" type="text" name="txtTrabajador">
+        <input type="button" name="btnEnviar" value="Enviar Trabajadores" onclick="validarNumero_forma01()">
+        <br>
+        N° Registros 
+        <input id="idRegistro" type="text" name="txtRegistro" value="" onKeyPress="return validarNumero_forma03(event)">
+        
+    </body>
+</html>

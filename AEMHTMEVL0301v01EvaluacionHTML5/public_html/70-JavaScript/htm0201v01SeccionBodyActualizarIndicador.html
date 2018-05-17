@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>.....[ Evaluación HTML5 - CSS3 - JS ].....</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link type="text/css" href="../CSS/70-JavaScript/css0101v01BodyH1P.css" rel="stylesheet"/>
+        
+        <script>
+            function update(online) {
+              document.getElementById('status').textContent =
+                online ? 'Online' : 'Offline';
+            }
+        </script>
+    </head>
+
+    <body ononline="update(true)"
+       onoffline="update(false)"
+       onload="update(navigator.onLine)">
+
+        <h1>JavaScript : onload, ononline y onoffline</h1>
+        
+        <p>You are: <span id="status">(Unknown)</span></p>
+    </body>
+</html>

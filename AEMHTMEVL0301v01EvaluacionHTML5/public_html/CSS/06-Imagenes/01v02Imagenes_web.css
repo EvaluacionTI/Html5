@@ -1,0 +1,99 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 18-jun-2017, 22:49:56
+    Author     : OFICINA
+*/
+#wrapper{
+    background-color: yellow; 
+    width: 900px; 
+    height: 800px; 
+    border-left: 5px solid brown;
+    margin: 0 auto;
+}
+
+#cabecera{
+    background-color: #0000FF; 
+    text-align: center; 
+    color: white; 
+    width: 900px; 
+    height: 150px;
+    display: table-cell;
+    vertical-align: middle;
+    background-image: url(../..//Imagen/logo_banco_financiero.png);
+    background-repeat: no-repeat;
+}
+
+#navegacion_horizontal{
+    background-color: #FFD800; 
+    width: 900px;
+    height: 50px;
+    display: table;
+}
+
+#navegacion_vertical_izquierda{
+    background-color: #FFD800; 
+    width: 180px; 
+    height: 520px; 
+    float: left;
+}
+
+#cuerpo{
+     background-color: #CCC; 
+     width: 1275px; 
+     height: 520px;
+}
+
+#pie_pagina{
+    background-color: #00FF00; 
+    text-align: center; 
+    color: white; 
+    width: 1275px; 
+    height: 25px;
+}
+
+#Home{
+    height: 50px;
+    width: 100px;
+    float: left;
+    line-height: 50px;
+}
+
+#Faq{
+    height: 50px;
+    width: 100px;
+    float: left;
+    line-height: 50px;
+}
+
+#About{
+    height: 50px;
+    width: 100px;
+    float: left;
+    line-height: 50px;
+}
+
+Careers{
+    height: 50px;
+    width: 100px;
+    float: left;
+    line-height: 50px;
+}
+
+Contact{
+    height: 50px;
+    width: 100px;
+    float: left;
+    line-height: 50px;
+}
+
+a:link{
+    color:#FFD800;
+    text-align: center;
+    font-family: Arial;
+    font-weight: bolder;
+    font-size: 24px;
+}

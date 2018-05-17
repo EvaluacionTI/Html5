@@ -1,0 +1,28 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 16/05/2017, 05:36:18 PM
+    Author     : ALDV
+*/
+
+h1{
+    background-color: orange;
+    text-align: center
+}
+
+div{
+    border: solid;
+    /* Ancho de los bordes   */
+    border-top-width: 20px;
+    border-right-width: 1em;
+    border-bottom-width: thick; /* Borde ancho */
+    border-left-width: thin; /* Borde delgado */
+}
+
+p {
+    border-left: 6px solid red;
+    background-color: lightgrey;
+}

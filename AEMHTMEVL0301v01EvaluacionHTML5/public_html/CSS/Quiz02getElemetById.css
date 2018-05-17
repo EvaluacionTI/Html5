@@ -1,0 +1,54 @@
+/* 
+    Created on : 03/03/2017, 08:41:01 AM
+    Author     : ALDV
+*/
+body{
+    background-color: lightblue;
+}
+
+h1{
+    background-color: orange;
+    text-align: center;
+}
+
+h5{
+    background-color: wheat;
+}
+
+h6{
+    background-color: yellowgreen;
+}
+
+p{
+    font-family: arial verdana;
+    font-size: 20px;
+}
+
+#dia{
+/*
+    background-color: gray;
+    background-position: 40% 50%;
+    background-size: 10em 10em;
+    background-repeat: round;
+    background-clip: border-box;
+    background-origin: border-box;
+    background-attachment: fixed;
+    background-image: url(../Imagen/lienzoAsombro.png) Si pone una letra en el div visualiza la imagen sino nada
+*/
+    background-color: gray;
+    column-fill: auto;
+}
+
+#valida{
+    background-color: antiquewhite;
+    background-position: 40% 50%;
+    background-size: 10em 10em;
+}
+
+#novalida{
+    background-color: green;
+    background-repeat: round;
+    background-clip: border-box;
+    background-origin: border-box;
+
+}

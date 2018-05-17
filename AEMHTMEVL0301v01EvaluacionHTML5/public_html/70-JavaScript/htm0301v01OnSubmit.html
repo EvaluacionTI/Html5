@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>.....[ Evaluación HTML5 - CSS3 - JS ].....</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link type="text/css" href="../CSS/70-JavaScript/css0101v01BodyH1P.css" rel="stylesheet"/>
+        
+        <script type="text/javascript">
+            function valida(pFrm){
+                var vOk = true;
+                var vMsg = "Debes escribir algo en los campos: \n";
+                
+                if(pFrm.elements[1].value===""){
+                    vMsg += " - Apellido Paterno \n";
+                    vOk = false;
+                }
+
+                if(pFrm.elements["idApellidoMaterno"].value===""){
+                    vMsg += " - Apellido Materno \n";
+                    vOk = false;
+                }
+
+                if(pFrm.elements["idPrimerNombre"].value===""){
+                    vMsg += " - Primer Nombre \n";
+                    vOk = false;
+                }
+
+                if(pFrm.elements["idSegundoNombre"].value===""){
+                    vMsg += " - Segundo Nombre \n";
+                    vOk = false;
+                }
+                
+                // No obligatorio
+                if(pFrm.elements["idTercerNombre"].value===""){
+                    vMsg += " - Tercer Nombre \n";
+                    vOk = false;
+                }
+
+                if(vOk===false){
+                    alert(vMsg);
+                }
+                return vOk;
+            }
+        </script>
+    </head>
+
+    <body>
+        <h1>JavaScript : onsubmit</h1>
+        <form id="idForm" action="" method="GET" onsubmit="return valida(this)">
+            <p>
+                <label>Apellido Paterno</label><input type="text" id="idApellidoPaterno">
+                <label>Apellido Materno</label><input type="text" id="idApellidoMaterno"><br>
+                <label>Primer Nombre</label><input type="text" id="idPrimerNombre">
+                <label>Segundo Nombre</label><input type="text" id="idSegundoNombre">
+                <label>Tercer Nombre</label><input type="text" id="idTercerNombre"><br>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Borrar">
+            </p>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 04-may-2017, 23:18:55
+    Author     : ALDV
+*/
+body{
+    background-color: orange;
+}
+
+table {
+    margin-top:10px;
+}
+
+td {
+    width:50%;
+    padding:10px;
+}
+
+td#c {
+    font-family:'Lucida Console', Monaco, monospace;
+    font-size:13px;
+    line-height:25px;
+}
+
+div#top {
+    borde:1px solid black; height:50px;
+    margin-top:-15px;
+    margin-left:-10px;
+    margin-right:-10px;
+    background:black;
+}
+
+div#top p{
+    color:white;
+    font-family:"Arial Black", Gadget, sans-serif;
+    font-size:13px;
+    margin-left:15px;
+}

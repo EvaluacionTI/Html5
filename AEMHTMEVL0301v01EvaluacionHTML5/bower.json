@@ -1,0 +1,13 @@
+{
+    "name": "HTML02v01EvaluacionHTML5-CSS3-JS",
+    "version": "1.0.0",
+    "main": "path/to/main.css",
+    "ignore": [
+        ".jshintrc",
+        "**/*.txt"
+    ],
+    "dependencies": {
+    },
+    "devDependencies": {
+    }
+}

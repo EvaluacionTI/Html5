@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--
+    Fecha       : 10/04/2017
+    Descripción : Cambiar el color del párrafo al pulsar clic en los botones.
+-->
+<html>
+    <head>
+        <title>....[Quiz 41449].....</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link type="text/css" href="../CSS/30-JS-Estructura.css" rel="stylesheet"/>
+    </head>
+    <body>
+
+        <h6>getElementId</h6>
+
+        <p id="idDia">Día de facturación</p>
+        <button onclick="cambiarColor('blue');">Azul</button>
+        <button onclick="cambiarColor('red');">Rojo</button>
+
+    </body>
+</html>
+
+
+<script type="text/javascript">
+
+  function cambiarColor(psNuevoColor) {
+    var elem = document.getElementById("idDia");
+    
+    elem.style.color = psNuevoColor;
+  }
+
+</script>
+    
