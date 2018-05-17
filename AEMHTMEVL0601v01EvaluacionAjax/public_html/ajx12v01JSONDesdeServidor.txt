@@ -1,0 +1,9 @@
+{
+    "nombre":"John",
+    "edad":31,
+    "animal":[
+        { "alias":"dog", "apodo":"Fido" },
+        { "alias":"cat", "apodo":"Felix" },
+        { "alias":"hamster", "apodo":"Lightning" }
+    ]
+}

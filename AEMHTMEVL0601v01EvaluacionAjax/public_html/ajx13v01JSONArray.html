@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>.....[ Evaluación AJAX ].....</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+        <h4>Contenido con Array</h4>
+        <br>
+        <p>El contenido escrito en formato JSON array, puede convertirse a un JavaScript Array</p>
+        <br>
+        <p id="demo">
+            
+        </p>
+        
+        <script>
+            var ovXMLHttp, vArray;
+            
+            // 1. Instanciamos el objeto XMLHttpRequest
+            ovXMLHttp = new XMLHttpRequest();
+            
+            // 2. Indicamos un manejador de eventos para que llegue la información
+            ovXMLHttp.onreadystatechange=function(){
+              if (this.readyState===4 && this.status === 200)  {
+                // 3. Va mostrar la información obtenida en la llamada
+                vArray = JSON.parse(this.responseText);
+                document.getElementById("demo").innerHTML = vArray[1];
+              }
+            };
+            // 4. Hacemos la llamada
+            ovXMLHttp.open("GET", "ajx13v01JSONArray.txt", true);
+            ovXMLHttp.send();
+        </script>
+        
+        <p>
+            Para visualizar pulse clic <a href="ajx13v01JSONArray.txt" target="_blank">ajx13v01JSONArray.txt</a>
+        </p>
+    </body>
+</html>

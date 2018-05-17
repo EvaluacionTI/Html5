@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>.....[ Evaluación AJAX ].....</title>
+    </head>
+    <body>
+       <h4>Acceso a valor de una matríz</h4>
+
+       <p id="demo"></p>
+
+       <!-- Mostrando los nombre de los objetos-->
+       <script>
+
+            var vObjeto, x;
+            vObjeto = { "nombre":"Leasing", 
+                                    "edad":18, 
+                                    "ciudad":["Lima", "Pallasca", "Huandoval"]
+                                  };
+            x = vObjeto.ciudad[1];
+            document.getElementById("demo").innerHTML = x;
+
+       </script>
+
+    </body>
+</html>

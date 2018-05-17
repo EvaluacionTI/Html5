@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>.....[ Evaluación AJAX ].....</title>
+    </head>
+    <body>
+        <h3>MODIFICANDO UN VALOR EN JSON</h3>
+
+       <p id="demo"></p>
+
+       <!-- Mostrando los nombre de los objetos-->
+       <script>
+
+            var vObjeto, x;
+            vObjeto = { "nombre":"Leasing", 
+                        "edad":18, 
+                        "ciudad":{  "departamento":"Lima",
+                                    "provincia": "Pallasca",
+                                    "distrito":"Huandoval"
+                                }
+                      };
+            
+            for (x in vObjeto){
+                document.getElementById("demo").innerHTML += vObjeto.ciudad.departamento + "<BR>";
+                document.getElementById("demo").innerHTML += vObjeto.ciudad["provincia"] + "<BR>";
+            }
+            
+       </script>
+
+    </body>
+</html>

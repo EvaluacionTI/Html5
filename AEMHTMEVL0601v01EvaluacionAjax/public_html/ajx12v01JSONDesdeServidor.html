@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>.....[ Evaluación AJAX ].....</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+        <h4>Uso del objeto XMLHttpRequest</h4>
+        <br>
+        <p>El contenido escrito en formato JSON, y puede convertirse facilmente en un objeto JavaScript.</p>
+        <br>
+        <p id="demo">
+            
+        </p>
+        
+        <script>
+            var ovXMLHttp, vObjeto;
+            
+            // 1. Instanciamos el objeto XMLHttpRequest
+            ovXMLHttp = new XMLHttpRequest();
+            
+            // 2. Indicamos un manejador de eventos para que llegue la información
+            ovXMLHttp.onreadystatechange=function(){
+              if (this.readyState===4 && this.status === 200)  {
+                // 3. Va mostrar la información obtenida en la llamada
+                vObjeto = JSON.parse(this.responseText);
+              }
+            };
+            // 4. Hacemos la llamada
+            ovXMLHttp.open("GET", "ajx12v01JSONDesdeServidor.txt", true);
+            ovXMLHttp.send();
+        </script>
+        
+        <p>
+            Para visualizar pulse clic <a href="ajx12v01JSONDesdeServidor.txt" target="_blank">ajx12v01JSONDesdeServidor.txt</a>
+        </p>
+    </body>
+</html>

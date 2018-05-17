@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>.....[ Evaluación AJAX ].....</title>
+    </head>
+    <body>
+        <h4>Bucle Matriz Anidada</h4>
+
+       <p id="demo"></p>
+
+       <!-- Mostrando los nombre de los objetos-->
+       <script>
+
+            var vObjeto, i, x="";
+            vObjeto = { "nombre":"Leasing", 
+                                    "edad":18, 
+                                    "auto":[
+                                        {"nombre":"Ford", "modelo":["Fiesta", "Focus", "Mustang"]},
+                                        {"nombre":"BMW", "modelo":["320i", "318i", "X5"]}, 
+                                        {"nombre":"Fiat", "modelo":["500", "Panda"]}
+                                    ]
+                      };
+            for (i in vObjeto.auto){
+                x += "<h1>" + vObjeto.auto[i].nombre + "</h1>";
+                for (j in vObjeto.auto[i].modelo){
+                   x += vObjeto.auto[i].modelo[j] + "<br>";
+                }
+            }
+            document.getElementById("demo").innerHTML = x;
+       </script>
+
+    </body>
+</html>
