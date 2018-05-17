@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>:....[Evaluacion Angular 1.6.4]....:</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../jsAngular/angular.min1.6.4.js"></script>
+        <link href="../Css/css0202v01AjaxConJSONP.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <div>....[Evaluacion Angular 1.6.4]....</div>
+        <hr>
+        <div ng-app="myAppPaises" ng-controller="ctrlAcumulador as vm">
+            <h3>Paises del Mundo</h3>
+            <p>
+                Vamos a usar el servicio web "Res Countries".<br>
+                <a href="https://restcountries.eu/">https://restcountries.eu/</a>
+            </p>
+            <p>
+                URL <a href="https://restcountries.eu/rest/v1/all">https://rescountries.eu/rest/v1/all</a>
+            </p>
+
+            <div ng-show="paises.length===0">Cargando paises ....</div>
+            <h2 ng-show="paises.length">
+                Se encontraron paises {{paises.length}} en el mundo
+            </h2>
+            <ol>
+                <li ng-repeat="pais in paises">{{pais.name}} - {{pais.capital}}</li>
+            </ol>
+        </div>
+        
+        <script type="text/javascript">
+            var vApp = angular
+                    .module("myAppPaises", [])
+                    .controller('ctrlAcumulador', ['$scope', '$http', function($scope, $http){
+                            
+                    $scope.paises = [];
+                    http.get("https://restcountries.eu/rest/v1/all")
+                            .then(function(res){
+                                $scope.paises=res.data;
+                            }, function(res){
+                                $scope.paises=[{name: 'Error!'} + res.status];
+                            });
+            }]);
+            
+        </script>
+        
+    </body>
+</html>

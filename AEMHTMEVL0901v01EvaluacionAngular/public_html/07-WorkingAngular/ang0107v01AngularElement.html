@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="MyAppEvaluacion">
+    <head>
+        <title>:....[Evaluacion Angular 1.6.4]....:</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../jsBootStrap/bootstrap.min3.3.7.css" type="text/css" rel="stylesheet">
+        <script src="../jsAngular/angular.min1.6.4.js" type="text/javascript"></script>
+
+        <link href="../Css/07-WorkingAngular/css0105v01ValidandoTipoDatos.css" type="text/css" rel="stylesheet"/>        
+        <script src="../30-jsAngular/07-WorkingAngular/js0107v01AngularElement.js"></script>
+    </head>
+    <body ng-controller="MyCtrlAngular">
+
+        <h3 id="idTitulo" class="alert-success">....[Evaluación Angular - angular.element ]....</h3>
+        
+        <div class="tab-pane">
+            <div class="container">
+                <dl> <dt>angular.element</dt>
+
+                    <dd id="count">{{count}}</dd> <dt>ngClick</dt>
+
+                    <dd>{{count}}</dd>
+                </dl>
+                <button onClick="addCount()">Contador JS</button>
+                <button ng-click="addCountByNgClick()">Contador por Angular</button>
+            </div>
+        </div>
+    </body>
+</html>

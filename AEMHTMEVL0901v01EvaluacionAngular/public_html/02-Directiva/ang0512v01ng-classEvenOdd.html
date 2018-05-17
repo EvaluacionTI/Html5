@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="myAppEvaluacion">
+    <head>
+        <title>:....[Evaluacion Angular 1.6.4]....:</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link type="text/css" rel="stylesheet" href="../jsBootStrap/bootstrap.min3.3.7.css">
+        <script type="text/javascript" src="../jsAngular/angular.min1.6.4.js"></script>
+        
+        <link type="text/css" rel="stylesheet" href="../Css/02-Directiva/css0512v01ng-classEvenOdd.css">
+        <script type="text/javascript" src="../30-jsAngular/02-Directiva/js0512v01ng-classEvenOdd.js"></script>
+    </head>
+
+    <body>
+        <h1 class="h1">Evaluación 1.6.4 - Directiva ng-even</h1>
+        <div class="panel-body" ng-controller="myCtrlEven">
+            <div>Lista de Fruta</div>
+            <ul ng-repeat="item in listaFruta" ng-class-even="'even'" ng-class-odd="'odd'">
+                <li>
+                    <div>
+                        <img ng-src="{{item.url}}"/>
+                        <h3 style="display: inline">{{item.nombreFruta}}</h3>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+    </body>
+</html>

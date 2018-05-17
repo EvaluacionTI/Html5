@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+
+        <title>:....[Evaluacion Angular 1.6.4]....:</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../jsAngular/angular.min1.6.4.js"></script>
+        <link href="../Css/css0101v01Acumulador.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <div style="background-color: orange; text-align: center">....[Evaluacion Angular 1.6.4]....</div>
+        <hr>
+        <div ng-app="myAppFormulario" ng-controller="ctrlAcumulador as vm">
+            <section>
+                <form ng-submit="vm.enviar()">
+                    <table>
+                        <tr><td>Nombre</td>
+                            <td><input type="text" ng-model="vm.fdatos.nombre"/></td>
+                        </tr>
+                        <tr><td>Edad</td>
+                            <td><input type="text" ng-model="vm.fdatos.edad" /></td>
+                        </tr>
+                        <tr><td colspan="2"><input type="submit" value="Enviar"/></td>
+                            
+                        </tr>
+                    </table>
+                </form>
+            </section>
+
+        </div>
+        
+        <script type="text/javascript">
+            var vApp = angular
+                    .module("myAppFormulario", [])
+                    .controller('ctrlAcumulador', ['$http', controladorPrincipal] );
+            
+            function controladorPrincipal($http){
+                var vm=this;
+                
+                // 1. inicializo un objeto en los datos del formulario
+                
+                vm.fdatos={};
+                // 2. declaro la funciona a enviar
+                vm.enviar = function(){
+                    $http.post("recibe-formulario.php", vm.fdatos)
+                            .success(function(res){
+                                console.log(res);
+                            });
+                    //por supuesto podrás volcar la respuesta al modelo con algo como vm.res = res;
+                };
+              
+            }
+            
+        </script>
+        
+
+
+        <script type="text/javascript">
+            var vApp = angular
+                    .module('myAppAcumulador', [])
+                    .controller('ctrlAcumulador', controller_main);
+            
+            function controller_main(){
+                var v = this;
+                
+                // scope.cuanto = 0;
+                v.total = 0;
+                v.titular = "titularpeq";
+                
+                v.sumar = function(){
+                    v.total += parseInt(v.cuanto);
+                };
+                
+                v.restar = function(){
+                    v.total -= parseInt(v.cuanto);
+                };
+                
+                v.clases = ["uno", "dos", "tres"];
+            };
+            
+        </script>
+        
+    </body>
+</html>
+

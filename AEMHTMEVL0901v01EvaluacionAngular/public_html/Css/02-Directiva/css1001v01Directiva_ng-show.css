@@ -1,0 +1,71 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 16/05/2017, 05:36:18 PM
+    Author     : ALDV
+*/
+body{
+    padding-top: 20px;
+}
+
+h3{
+    background-color: orange;
+    text-align: center
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+label {
+    margin-right: 10px;
+}
+
+.header {
+    margin-bottom: 30px;
+}
+
+.chooseLib{
+    border-bottom: 1px solid #000; 
+    padding-bottom: 10px; 
+    margin-bottom: 20px;
+}
+
+.libs {
+    list-style-type: none; margin: 0px; padding: 0px; width: 300px;
+}
+
+.libs li {
+    background: #B4DFA6; 
+    padding: 10px;  
+    margin-bottom: 3px;
+}
+
+.libs li span{
+    margin-right: 10px;
+}
+
+.FILA_TITULO_H3{
+    background-color: antiquewhite;
+    text-align: center;
+    color: yellow; 
+    text-align: center        
+}
+
+.animate-show-hide.ng-hide {
+  opacity: 0;
+}
+
+.animate-show-hide.ng-hide-add,
+.animate-show-hide.ng-hide-remove {
+  transition: all linear 0.5s;
+}
+
+.check-element {
+  border: 1px solid black;
+  opacity: 1;
+  padding: 10px;
+}

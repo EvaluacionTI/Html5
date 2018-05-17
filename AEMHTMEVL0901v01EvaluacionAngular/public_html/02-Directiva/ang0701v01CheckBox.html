@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="myApp" ng-controller="ctrlCheck as cc">
+    <head>
+        <title>:....[Evaluacion Angular 1.6.4]....:</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../jsAngular/angular.min1.6.4.js"></script>
+    </head>
+    <body>
+        <div style="background-color: orange; text-align: center">....[Evaluación Angular 1.6.4]....</div>
+        <hr>
+        
+        <p>
+        <input type="checkbox" ng-model="cc.activo" ng-change="cc.avisar()">
+        Este campo es cc.activo y su valor en el modelo es {{ cc.activo }}.
+        <br />
+        Tiene además un ng-change asociado con el método cc.avisar().
+        </p>
+    <p>
+        <input type="checkbox" ng-model="cc.clarooscuro" ng-true-value="claro" ng-false-value="oscuro" />
+        Este campo tiene el value modificado. Ahora vale {{ cc.clarooscuro }}
+    </p>
+    <p>
+        <input type="button" ng-click="cc.activo=true" value="pulsa para cambiar la propiedad del modelo del primer checkbox a true"> Observarás que aunque el estado pueda cambiar, no se invoca al ng-change de ese primer checkbox.
+    </p>    
+
+
+    <script type="text/javascript">
+        var app = angular.module("myApp", []);
+            app.controller("ctrlCheck", function(){
+            var vm = this;
+            //podríamos inicializar valores del modelo
+            //vm.activo = false;
+
+            vm.avisar = function(){
+                console.log("cambié");
+            };
+        });
+    </script>
+       
+    </body>
+</html>

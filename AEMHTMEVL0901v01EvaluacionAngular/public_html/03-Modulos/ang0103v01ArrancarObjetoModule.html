@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app>
+    <head>
+        <title>:....[Evaluacion Angular 1.4.8]....:</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../jsAngular/angular.min.js"></script>
+    </head>
+    <body>
+        <div style="background-color: orange; text-align: center">....[Evaluación Angular 1.6.4]....</div>
+        <hr>
+        Desde Javascript crearás los módulos usando el método angular.module() e indicándole una serie de parámetros.
+        <br>
+        <div>
+            Declaración de módulo<br>
+            angular.module('miAplicacion', [ ... ], function(...){ ... })
+            <br>
+            <br>
+            Esta llamada a angular.module() te devuelve un objeto module, que tiene una serie de métodos como config, run, provider, service, factory, directive, controller, value, etc. que son los que nos sirven para controlar la lógica de presentación y la lógica de negocio.
+            <br>
+            <br>
+            <p style="background-color: green"> Declaración forma N° 01:<br>
+                var nuevaApp = angular.module('nuevaApp', []);
+                    nuevaApp.controller( ... );
+            </p>
+            <br><br>
+            <p style="background-color: activecaption"> Declaración forma N° 02:<br>
+                angular
+                    .module('nuevaApp', [])
+                    .controller( ... )
+                    .factory( ... );
+            </p>
+
+        </div>
+        
+    </body>
+</html>

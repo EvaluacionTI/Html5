@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="MyAppEvaluacion">
+    <head>
+        <title>:....[Evaluacion Angular 1.6.4]....:</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../jsBootStrap/bootstrap.min3.3.7.css" type="text/css" rel="stylesheet">
+        <script src="../jsAngular/angular.min1.6.4.js" type="text/javascript"></script>
+
+        <link href="../Css/06-InputValidacion/css0101v01InputValidacion.css" type="text/css" rel="stylesheet"/>        
+        <script src="../30-jsAngular/06-InputValidacion/js0101v01InputValidacion.js"></script>
+    </head>
+
+    <body ng-controller="MyControladorInput as cc0601">
+
+        <h3 id="idTitulo" class="alert-info">....[Evaluación Angular - Ultimatix - Input - Validación ]....</h3>
+        
+        <div class="container">Filtro de fecha : {{cc0601.vFechaSistema06}}
+            <div class="panel panel-default" style="box-shadow: 1px 1px 10px rgba(57,57,57,0.5);">
+                <ul class="alert-warning">
+                    <li class="alert-danger"><span>Fecha Sistema: {{cc0601.vFechaSistema06}}</span></li>
+                    
+                    <li>Cliente : {{cc0601.aUsuario06.vNombre06 | uppercase }}</li>
+                    <li>Año : {{cc0601.aUsuario06.vFechaInicio06 | date:'yyyy'}}</li>
+                    <li>Mes :{{cc0601.aUsuario06.vFechaInicio06 | date:'MM'}}</li>
+                    <li>Día :{{cc0601.aUsuario06.vFechaInicio06 | date:'dd'}}</li>
+
+                    <li>Fecha ddmmyyyyy : {{cc0601.aUsuario06.vFechaInicio06 | date:'ddMMyyyy'}}</li>
+                    <li>Fecha dd mes año : {{cc0601.aUsuario06.vFechaInicio06 | date:'dd MMMM, yyyy'}}</li>
+                    <li>Activo : {{cc0601.aUsuario06.vEsActivo | MySiNo}}</li>
+                    <li>Sub Tipo : {{cc0601.aUsuario06.vTipoSubCarta06}}</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="container-fluid">
+            <div class="panel panel-default" style="box-shadow: 5px 10px 15px #B4DFA6;">
+                Nombre :<input type="text" ng-model="cc0601.aUsuario06.vNombre06">
+                Tipo Carta: <select ng-model="cc0601.aUsuario06.vTipoSubCarta06" ng-options="cboTipo for cboTipo in cc0601.aUsuario06.vTipoCarta06">
+                </select>
+                Esta Activo: <input type="checkbox" ng-model="cc0601.aUsuario06.vEsActivo">
+                <p><span class="show">
+                        <input type="radio" ng-model="cc0601.aUsuario06.vEsActivo" ng-value="true">YES
+                        <input type="radio" ng-model="cc0601.aUsuario06.vEsActivo" ng-value="false">NO
+                    </span>
+                </p>
+            </div>
+        </div>
+    </body>
+</html>

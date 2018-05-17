@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="MyAppEvaluacion">
+    <head>
+        <title>:....[Evaluacion Angular 1.6.4]....:</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../jsBootStrap/bootstrap.min3.3.7.css" type="text/css" rel="stylesheet">
+        <script src="../jsAngular/angular.min1.6.4.js" type="text/javascript"></script>
+
+        <link href="../Css/07-WorkingAngular/css0105v01ValidandoTipoDatos.css" type="text/css" rel="stylesheet"/>        
+        <script src="../30-jsAngular/07-WorkingAngular/js0106v01QuerySelector.js"></script>
+    </head>
+    <body ng-controller="MyCtrlQuery as cc15">
+
+        <h3 id="idTitulo" class="alert-success">....[Evaluación Angular - document.QuerySelector ]....</h3>
+        
+        <p>QuerySelectorAll</p>
+       <ul>
+            <li class="item">Item 1</li>
+            <li class="item">Item 2</li>
+            <li class="item">Item 3</li>
+            <li class="item">Item 4</li>
+            <li class="item">Item 5</li>
+       </ul>
+
+        <p>QuerySelector</p>
+       <ol>
+            <li class="vItem">Item 1</li>
+            <li class="vItem">Item 2</li>
+            <li class="vItem">Item 3</li>
+            <li class="vItem">Item 4</li>
+            <li class="vItem">Item 5</li>
+       </ol>
+        
+        {{elementosQuery}}
+    </body>
+</html>

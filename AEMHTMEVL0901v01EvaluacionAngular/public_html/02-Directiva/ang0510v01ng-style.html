@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="myAppEvaluacion">
+    <head>
+        <title>:....[Evaluacion Angular 1.6.4]....:</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link type="text/css" rel="stylesheet" href="../jsBootStrap/bootstrap.min3.3.7.css">
+        <script type="text/javascript" src="../jsAngular/angular.min1.6.4.js"></script>
+        
+        <script type="text/javascript" src="../30-jsAngular/02-Directiva/js0510v01ng-style.js"></script>
+    </head>
+
+    <body>
+        <h1 class="h1">Evaluación 1.6.4 - Directiva ng-style</h1>
+        <div class="panel-body" ng-controller="myCtrlStyle">
+            <p ng-style="style1">Evaluación Angular 1.6.4.</p>
+            <br>
+            <p class="ng-style:style2">Carta Fianza con Angular - EJB y Servlet</p>
+            <br>
+            <button ng-click="toggleClick(0)">Turn off styling</button>
+            <button ng-click="toggleClick(2)">Turn on styling</button>
+        </div>
+        
+    </body>
+</html>

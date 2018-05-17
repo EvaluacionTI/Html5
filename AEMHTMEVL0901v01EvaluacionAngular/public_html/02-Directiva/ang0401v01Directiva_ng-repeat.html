@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>:....[Evaluacion Angular 1.4.8]....:</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    </head>
+    <body>
+        <div style="background-color: orange; text-align: center">....[Evaluación Angular 1.4.8 vs jQuery]....</div>
+        <hr>
+        
+        <div ng-app="" ng-init="aProducto = [{codigo:'CF', nombre:'CARTA'}, 
+                                             {codigo:'LS', nombre:'LEASING'}, 
+                                             {codigo:'WL', nombre:'WIN LEASING'}]">
+            <p>Ingrese el Producto: <input type = "text" ng-model = "vNombre"></p>
+            <p>Producto <span ng-bind = "vNombre"></span>!</p>
+            <p>Lista de Productos :</p>
+      
+         <ol>
+            <li ng-repeat = "lista in aProducto">
+                <span>{{ 'Codigo ' + lista.codigo + ', Producto ' + lista.nombre }}</span>
+            </li>
+         </ol>
+        </div>
+        
+    </body>
+</html>

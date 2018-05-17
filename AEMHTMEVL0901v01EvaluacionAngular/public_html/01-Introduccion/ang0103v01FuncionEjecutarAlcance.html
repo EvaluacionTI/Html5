@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="MyApp">
+    <head>
+        <title>:....[Evaluacion Angular 1.2.23]....:</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../Css/css0101v03Introduccion.css" type="text/css" rel="stylesheet"/>
+        <script src="../jsAngular/angular.min1.6.4.js" type="text/javascript"></script>
+        <script src="../30-jsAngular/js0102v02FuncionEjecutarAlcance.js"></script>
+    </head>
+    <body ng-controller="MyControlador">
+        <div>....[Evaluación Angular 1.6.4]....</div>
+        <hr>
+        <br>
+        
+        <b>Productos = ['Platano', 'Naranja', 'Manzana', 'Tuna', 'Mandarina']</b><br>
+        <br>
+        Nombre<input type="text" ng-model="vNombre">
+        <br>
+        Resultado de angular -----> {{vNombre}}
+        
+        <br><br>
+        <h3>
+            Registrar la Posición de fruta<input type="text" ng-model="itemIndex"/>
+            <input type="button" value="cargar Fruta" ng-click="getFruta()">
+        </h3>
+        <br>
+        <p>
+            El arreglo incia en la posición cero (0)
+            Item actual es :{{currentItem}}
+        </p>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>:....[Evaluacion BootStrap 3.3.1]....:</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../Css/css0301v01ValidaFormBootStrap.css" type="text/css" rel="stylesheet">
+        
+        <script src="../jsAngular/angular.min1.6.4.js" type="text/javascript"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+        <script src ="../30-jsAngular/js0103v01ValidarFormulario.js"></script>
+        
+    </head>
+    <body ng-app="myAppFormulario">
+        <div class="container">
+          <h2>Formulario de AngularJS con BootStrap</h2>
+          <div ng-controller="myCtrlFormulario">
+              
+            <form name="exampleForm">
+                <div class="form-group">
+                <table>
+                    <tr><td><label for="vNombre">Nombre</label></td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="Nombre de Cliente" name="vNombre" ng-model="formData.vNombre" required
+                                   data-ng-class='{ error: exampleForm.vNombre.$invalid && !exampleForm.$pristine }'>
+                            <span ng-show="exampleForm.vNombre.$error.required">*</span>
+                        </td>
+                    </tr>
+                    <tr><td><label for="vApellido">Apellido</label></td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="Apellido de Cliente" name="vApellido" ng-model="formData.vApellido" required
+                                   data-ng-class='{ error: exampleForm.vApellido.$invalid && !exampleForm.$pristine }'>
+                            <span ng-show="!exampleForm.$pristine && exampleForm.vApellido.$error.required">Apellido requerido</span>
+                        </td>
+                    </tr><td><label for="vEmail">Email</label></td>
+                        <td>
+                            <input type="email" class="form-control" placeholder="example@email.com" name="vEmail" ng-model="formData.vEmail" required
+                                   data-ng-class='{ error: exampleForm.vEmail.$invalid && !exampleForm.$pristine, warning: exampleForm.vEmail.$error.vEmail }'>
+                            <span ng-show="!exampleForm.$pristine && exampleForm.vEmail.$error.email">Por favor ingrese un Email válida</span>                            
+                        </td>
+                    <tr>
+                    </tr>
+                    <tr><td colspan="2">
+                            <input type="submit" class="btn btn-success pull-right" ng-click="submitForm(formData)" ng-disabled="!exampleForm.$valid"/>
+                        </td>
+                    </tr>
+                </table>
+                </div>
+            </form>
+          </div>
+        </div>
+        <br>
+        Contenido:
+        {{formData}}
+        
+    </body>
+</html>

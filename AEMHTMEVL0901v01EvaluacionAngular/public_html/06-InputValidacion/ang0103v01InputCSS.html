@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="MyAppEvaluacion">
+    <head>
+        <title>:....[Evaluacion Angular 1.6.4]....:</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../jsBootStrap/bootstrap.min3.3.7.css" type="text/css" rel="stylesheet">
+        <script src="../jsAngular/angular.min1.6.4.js" type="text/javascript"></script>
+
+        <link href="../Css/06-InputValidacion/css0103v01InputCSS.css" type="text/css" rel="stylesheet"/>        
+        <script src="../30-jsAngular/06-InputValidacion/js0103v01InputCSS.js"></script>
+    </head>
+
+    <body ng-controller="MyControladorCSS01 as cc0603">
+
+        <h3 id="idTitulo" class="alert-info">....[Evaluación Angular - Ultimatix - Input - Validación ]....</h3>
+        
+        <div class="container">Filtro de fecha : {{cc0603.vFechaSistema08}}
+            <div class="panel panel-default" style="box-shadow: 1px 2px 3px rgba(57,57,57,0.5);">
+                <form class="form-control-static" name="frmRegistro" novalidate>
+                    <table class="tab-pane">
+                        <tr><td colspan="2" class="alert-info text-right" ><span>Fecha Sistema: {{cc0602.vFechaSistema07 | date:'dd MM yyyy'}}</span>
+                            </td>
+                        </tr>
+                        <tr><td>Nombre :</td>
+                            <td><input type="text" ng-model="cc0603.aData08.vNombre08" required></td>
+                        </tr>
+                        <tr><td>Apellido :</td>
+                            <td><input type="text" ng-model="cc0603.aData08.vApellido08" required class="ng-dirty ng-valid"></td>
+                        </tr>
+                        <tr><td>Tipo Carta:</td>
+                            <td><select ng-model="cc0603.aData08.vTipoSubCarta08" ng-options="cboTipo for cboTipo in cc0603.aData08.vTipoCarta08"></select>
+                            </td>
+                        </tr>
+                        <tr><td>Estado activo (Si/No) :</td>
+                            <td><input type="checkbox" ng-model="cc0603.aData08.vEsActivo08">  {{cc0603.aData08.vEsActivo08 | MySiNo}}
+                            </td>
+                        </tr>
+                        <tr><td>Fecha Emisión</td>
+                            <td><input type="date" ng-model="cc0603.aData08.vFechaInicio08"></td>
+                        </tr>
+                        <tr><td></td>
+                            <td><button class="btn" ng-click="cc0603.Procesar(frmRegistro)">Procesar</button></td>
+                        </tr>
+                    </table>
+                </form>
+           </div>
+        </div>
+        <p>{{cc0603.aData08}}</p>
+    </body>
+</html>

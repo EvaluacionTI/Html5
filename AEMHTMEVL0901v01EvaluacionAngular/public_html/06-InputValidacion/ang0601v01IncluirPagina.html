@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="MyAppEvaluacion">
+    <head>
+        <title>:....[Evaluacion Angular 1.6.4]....:</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="../jsBootStrap/bootstrap.min3.3.7.css" type="text/css" rel="stylesheet">
+        <script src="../jsAngular/angular.min1.6.4.js" type="text/javascript"></script>
+        
+        <link href="../Css/01-Introduccion/css0103v03FuncionScope.css" type="text/css" rel="stylesheet"/>
+        <script src="../30-jsAngular/01-Introduccion/js0104v01FuncionScopeApp.js"></script>
+        <script src="../30-jsAngular/06-InputValidacion/js0601v01IncluirPagina.js"></script>
+    </head>
+    
+    <body>
+        <h3 class="h3">....[Evaluación Angular 1.6.4]....</h3>
+        <br>
+        <div ng-controller="MyCtrlPagina">
+            <div id="cabecera" class="panel-heading">
+                Cabecera
+                <span ng-include="social"></span>
+            </div>
+            <div id="contenido" class="panel-body">
+                cuerpo
+            </div>
+            <div id="piePagina" class="panel-footer">
+                Pie de página
+                <span ng-include="social"></span>
+            </div>
+        </div>
+
+    </body>
+</html>

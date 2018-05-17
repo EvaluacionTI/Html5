@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="appCartaFianza">
+    <head >
+        <title>:....[Evaluacion Angular 1.4.8]....:</title>
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=11;IE=10;IE=9" >
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="manifest" href="../imagenes/20-CartaFianza/icono/manifest.json">
+        <link href="../jsBootStrap/bootstrap.min0.13.1-0.css" type="text/css" rel="stylesheet">
+        
+        <script src="../jsAngular/angular.min1.6.4.js" type="text/javascript"></script>
+        <script src="../jsJQuery/jquery-2.1.4.min.js" type="text/javascript"></script>
+        <script src="../jsBootStrap/bootstrap.min3.3.7.js" type="text/javascript"></script>
+        
+        <link href="../Css/20-CartaFianza/css0102v01InicioSesion.css" type="text/css" rel="stylesheet">
+        <script src="../30-jsAngular/20-CartaFianza/js0102v01InicioSesion.js" ></script>
+    </head>
+
+    <body ng-controller="ctrlInicioSesion02">
+        
+        <div id="div_loge_avisos"></div>
+
+        <form id="idIniciarSesion" name="FrmInicioSesion" method="POST" action="j_security_check">
+
+            <div class="fondoTop LOGEO_TOP"><img alt="" src="../imagenes/20-CartaFianza/logo_financiero_1.png" /></div>
+            <div id="idIniciarSesionDiv">
+                <table class="TABLE_SUPERIOR">
+                    <tr><td align="center">
+                        <table class="TABLE_MEDIO">
+                            <tr><td  align="center">
+                                    <div class="panel panel-default" style="box-shadow: 1px 1px 10px rgba(57,57,57,0.5);">
+                                    <div class="panel-heading"><img alt="" src="../imagenes/20-CartaFianza/logo_portal_2.png" /></div>
+                                    <table class="table">
+                                        <tr>
+                                            <td><strong>Usuario</strong></td>
+                                            <td><input type="text" class="form-control" id="idUsuario"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Password</td>
+                                            <td><input type="password" class="form-control" id="idClave"/></td>
+                                        </tr>
+                                        <tr><td colspan="2" align="Center">
+                                                <a class="btn btn-primary" id="idBtnIniciar" ng-click="iniciarSesion02()">
+                                                <i class="glyphicon glyphicon-play"></i>Iniciar sesión</a>
+                                            </td>
+                                         </tr>
+                                    </table>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr ng-show="vMensajError.length>0">
+                                <td class="FILA_TD">{{vMensajError}}</td>
+                            </tr>
+                        </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+
+        <div ng-include="'ang0102v02Piepagina.html'"></div>
+    </body>
+</html>

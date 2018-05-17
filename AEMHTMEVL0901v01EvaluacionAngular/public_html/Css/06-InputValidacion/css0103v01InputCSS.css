@@ -1,0 +1,81 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 16/05/2017, 05:36:18 PM
+    Author     : ALDV
+*/
+
+body{
+    background-color: orange;
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+h3{
+    background-color: orange;
+    text-align: center;
+}
+
+p{
+    margin: 4px;
+}
+
+.ng-bindig{
+    color: #ff0000;
+}
+
+div{
+    box-sizing: border-box;
+    
+    border: #999999 1px solid;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+div.ng-scope{
+    background: #ddddff
+}
+
+td{
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+input{
+    border: #888888 1px solid;
+    border-radius: 10px;
+    padding: 1px 5px 4px 10px;
+}
+
+input.ng-dirty.ng-valid{
+    background: #ddffdd;
+}
+
+input.ng-pristine{
+    background: #ffdddd;
+}
+
+input.ng-dirty.ng-invalid{
+    background: #ffdddd;
+}
+
+button{
+    background: #DDDDDD;
+    padding: 2px 4px 6px 8px;
+}
+
+.frmRegistro tr > td{
+    text-align: left;
+    vertical-align: middle;
+    padding: 2px;
+}
+
+.frmRegistro tr > td:first-child{
+    text-align: right;
+}
+

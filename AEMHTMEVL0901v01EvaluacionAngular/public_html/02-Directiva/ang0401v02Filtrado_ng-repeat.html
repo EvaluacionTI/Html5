@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>:....[Evaluacion Angular 1.6.4]....:</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../jsBootStrap/bootstrap.min3.3.7.js" type="text/css" rel="stylesheet">
+        <script src="../jsAngular/angular.min1.6.4.js"></script>
+        
+        <link href="../Css/css0101v02Filtrado_ng-repeat.css" type="text/css" rel="stylesheet"/>
+    </head>
+
+    <body>
+        <h1 class="h1">Evaluación 1.6.4 - Ajax con JSONP</h1>
+        <div ng-app="apiApp" ng-controller="apiAppCtrl as vm">
+         <h1>Pruebo Ajax con JSONP</h1>
+         <p style="background-color: antiquewhite">
+            Busca cerveza:
+            <input type="text" ng-model="vm.nombre"> 
+            <input type="button" value="Buscar" ng-click="vm.buscaCervezas()">
+         </p>
+
+         <aside style="background-color: #d5d5ff">
+              <h2>Filtra:</h2>
+               <input type="text" ng-model="vm.filtroCliente">
+              <h2>Orden</h2>
+               <p>
+                   <button ng-click="vm.orden=false">Alfabetico</button>
+                   <br />
+                   <button ng-click="vm.orden=true">Contrario</button>
+               </p>
+               <p>
+                   <input type="radio" name="campo" ng-model="vm.campo" value="name"> Nombre
+                   <br />
+                   <input type="radio" name="campo" ng-model="vm.campo" value="description"> Descripción
+               </p>
+         </aside>
+
+         <section class='panel'>
+           <ul>
+             <li ng-repeat="cerveza in vm.cervezas | filter:vm.filtroCliente | orderBy:vm.campo:vm.orden" 
+                 ng-class="{even: $even, odd: $odd}">
+               <span>{{$index +1}}.- {{cerveza.name}},</span> {{ cerveza.description }}
+             </li>
+           </ul>
+         </section> 
+       </div>
+        
+        <script type="text/javascript">
+            angular
+                .module('apiApp', [])
+                .controller('apiAppCtrl', controladorPrincipal);
+
+            function controladorPrincipal($scope, $http){
+                alert($scope.campo);
+                var vm=this;
+
+                vm.orden = false;
+                vm.campo = "name";
+
+                var url = "http://api.openbeerdatabase.com/v1/beers.json?callback=JSON_CALLBACK";
+                if(vm.nombre){
+                    url += "&query=" + vm.nombre;
+                }
+                vm.buscaCervezas = function(){
+                    $http.jsonp(url).success(function(respuesta){
+                        console.log("res:", respuesta);
+                        vm.cervezas = respuesta.beers;
+                    });
+                };
+            }            
+        </script>
+    </body>
+</html>

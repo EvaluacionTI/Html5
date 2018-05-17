@@ -1,0 +1,86 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 16/05/2017, 05:36:18 PM
+    Author     : ALDV
+*/
+
+.FILA_TITULO_H3{
+    background-color: antiquewhite;
+    text-align: center;
+    color: yellow; 
+    text-align: center        
+}
+
+.FILA_TITULO_DIV {
+	padding-top: 7px;
+	padding-bottom: 7px;
+	border-bottom: 2px solid #ddd;
+	font-weight: bold;
+	background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(192,221,247,0.2) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(192,221,247,0.2))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(192,221,247,0.2) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(192,221,247,0.2) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(192,221,247,0.2) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(192,221,247,0.2) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#33c0ddf7',GradientType=0 ); /* IE6-9 */
+}
+
+.fondoTop {
+        background: rgba(255,253,3,1);
+        background: -moz-linear-gradient(top, rgba(255,253,3,1) 0%, rgba(245,211,19,1) 5%, rgba(255,253,3,1) 95%, rgba(245,211,19,1) 100%);
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,253,3,1)), color-stop(5%, rgba(245,211,19,1)), color-stop(95%, rgba(255,253,3,1)), color-stop(100%, rgba(245,211,19,1)));
+        background: -webkit-linear-gradient(top, rgba(255,253,3,1) 0%, rgba(245,211,19,1) 5%, rgba(255,253,3,1) 95%, rgba(245,211,19,1) 100%);
+        background: -o-linear-gradient(top, rgba(255,253,3,1) 0%, rgba(245,211,19,1) 5%, rgba(255,253,3,1) 95%, rgba(245,211,19,1) 100%);
+        background: -ms-linear-gradient(top, rgba(255,253,3,1) 0%, rgba(245,211,19,1) 5%, rgba(255,253,3,1) 95%, rgba(245,211,19,1) 100%);
+        background: linear-gradient(to bottom, rgba(255,253,3,1) 0%, rgba(245,211,19,1) 5%, rgba(255,253,3,1) 95%, rgba(245,211,19,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffd03', endColorstr='#f5d313', GradientType=0 );
+}
+
+
+.LOGEO_TOP {
+        height: 50px;
+        padding-top: 8px;
+        text-align: center;
+        -webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.175);
+        box-shadow: 0 3px 3px rgba(0,0,0,0.175);
+}
+
+.frm_requerido {
+        color: red;	
+}
+
+.textoAdicional {
+    color: #777;
+    font-style: italic;
+    font-size: 12px;
+}
+
+.TABLE_SUPERIOR{
+    border: 0;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    alignment-adjust: central;
+}
+
+.TABLE_MEDIO{
+    border: 0;
+    width: 40%;
+    padding: 0;
+    text-align: center;
+    alignment-adjust: central;
+}
+
+.TABLE_INFERIOR{
+    border: 0;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    alignment-adjust: central;
+}
+
+

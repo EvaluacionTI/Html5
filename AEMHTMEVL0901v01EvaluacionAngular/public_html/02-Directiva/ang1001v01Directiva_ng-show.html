@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="myAppCartaFianza">
+    <head>
+        <title>:....[Evaluacion Angular 1.6.4]....:</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../jsBootStrap/bootstrap.min.css" type="text/css" rel="stylesheet">
+        <script src="../jsAngular/angular.min1.6.4.js"></script>         
+
+        <link href="../Css/02-Directiva/css1001v01Directiva_ng-show.css" type="text/css" rel="stylesheet">
+        <script src="../30-jsAngular/02-Directiva/js1001v01Directiva_ng-show.js"></script>
+    </head>
+    <body>
+        <h3 id="idTitulo" class="FILA_TITULO_H3">....[Evaluación Angular vs Directiva ng-show]....</h3>        
+        
+        <div class="container">Bootstrap: container
+            <div class="well" ng-controller="showHideController">Bootstrap : well
+                <div class="chooseLib">Estilo Personalizado
+                    <label ng-repeat="index in libs">
+                        <input type="checkbox" ng-model="index.checked">{{index.name}}
+                    </label>
+                </div>
+                <ul class="libs">
+                    <li ng-repeat="index in libs" ng-show="index.checked">
+                        <span class="glyphicon glyphicon-ok">{{index.name}}</span>
+                    </li>
+                </ul>
+            </div>                
+        </div>
+        
+
+    </body>    
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="MyAppEvaluacion">
+    <head>
+        <title>:....[Evaluacion Angular 1.6.4]....:</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../jsBootStrap/bootstrap.min3.3.7.css" type="text/css" rel="stylesheet">
+        <script src="../jsAngular/angular.min1.6.4.js" type="text/javascript"></script>
+
+        <link href="../Css/07-WorkingAngular/css0101v01CambiarLlave.css" type="text/css" rel="stylesheet"/>        
+        <script src="../30-jsAngular/07-WorkingAngular/js0101v01CambiarLlave.js"></script>
+    </head>
+    <body ng-controller="MyCtrlCambiarLlave01 as cc01">
+
+        <h3 id="idTitulo" class="alert-info">....[Evaluación Angular - Ultimatix - Cambiar {} ]....</h3>
+        
+        <div class="form-group">
+            <p>Seleccionar la comida</p>Filtro de fecha : (~cc01.vFechaSistema10~)
+            <p><select ng-model="cc01.aComida10.tipoComida10">
+                    <option value="">All</option>
+                    <option value="Fruta">Fruta</option>
+                    <option value="Vegetales">Vegetales</option>
+                </select>
+                
+            </p>
+        </div>
+        <hr>
+        <div class="panel panel-default" style="box-shadow: 1px 2px 3px #00FF00;">Filtro de fecha : (~cc01.vFechaSistema10~)
+            <ul class="row">
+                <li ng-repeat="item in cc01.aComida10 | filter:cc01.aComida10.tipoComida10">
+                    (~item.nombreComida10~)  (~item.tipoComida10~)
+                </li>
+            </ul>
+        </div>
+        
+    </body>
+</html>

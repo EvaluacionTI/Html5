@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="myAppEvaluacion">
+    <head>
+        <title>:....[Evaluacion Angular 1.6.4]....:</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link type="text/css" rel="stylesheet" href="../jsBootStrap/bootstrap.min3.3.7.css">
+        <script type="text/javascript" src="../jsAngular/angular.min1.6.4.js"></script>
+        
+        <script type="text/javascript" src="../30-jsAngular/02-Directiva/js0203v01ng-model.js"></script>
+    </head>
+
+    <body>
+        <h1 class="h1">Evaluación 1.6.4 - Directiva ng-href</h1>
+        <div class="panel-body" ng-controller="myCtrlModel">
+            <h2>Enter car details</h2>
+            
+            Enter make : <div>
+                <input type="text" ng-model="car.make">
+            </div>
+            <div>
+                <label>Select the year of manufacture</label>
+                <select ng-model="car.selectedYear"
+                        ng-options="opt.label for opt in car.yearOptions"></select>
+            </div>
+            <div>
+                <label>Enter a description of your car</label>
+                <textarea ng-model="description"></textarea>
+            </div>
+            <h3>Sumario</h3>
+            <p>The make of your car is : {{car.make}}</p>
+            <p>The year of manufacture  is {{car.selectedYear.label}}</p>
+            <p>The description of your car is {{description}}</p>
+        </div>
+        
+    </body>
+</html>

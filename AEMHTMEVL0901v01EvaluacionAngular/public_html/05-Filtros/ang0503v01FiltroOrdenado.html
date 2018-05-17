@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="MyAppEvaluacion">
+    <head>
+        <title>:....[Evaluacion Angular 1.6.4]....:</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../jsBootStrap/bootstrap.min3.3.7.css" type="text/css" rel="stylesheet">
+        <script src="../jsAngular/angular.min1.6.4.js" type="text/javascript"></script>
+
+        <link href="../Css/05-Filtros/css0503v01FiltroOrdenado.css" type="text/css" rel="stylesheet"/>        
+        <script src="../30-jsAngular/05-Filtros/js0503v01FiltroOrdenado.js"></script>
+    </head>
+    <body ng-controller="MyControladorFiltro03 as cc03">
+
+        <h3 id="idTitulo" class="alert-info">....[Evaluación Angular - Ultimatix - Filtro Ordenado ]....</h3>
+        
+        <div class="container">Sin Ordenar
+            <div class="panel panel-default" style="box-shadow: 1px 1px 10px rgba(57,57,57,0.5);">
+                <ul class="btn-primary" ng-repeat="item in cc03.aUsuario03">
+                    <li><p>Nombre : {{item.vNombre03 | MyCapitalize}}</p></li>
+                    <li><p>Apellido : {{item.vApellido03 | MyCapitalize1}}</p></li>
+                    <li><p>Tipo Cuenta : {{item.vTipoCuenta03 | lowercase}}</p></li>
+                    <li><p>Importe : {{item.vImporte03 | currency:'PEN S/ '}}</p></li>
+                    <li><p>Redondeado : {{item.vImporte03 | currency:'USD $ ':0}}</p></li>
+                    <li><p>Código : {{item.vCodigo03}}</p></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container">Ordenado descendente
+            <div class="panel panel-default" style="box-shadow: 1px 1px 10px rgba(57,57,57,0.5);">
+                <ul class="btn-primary" ng-repeat="item in cc03.aUsuario03 | orderBy:'-vNombre03'">
+                    <li><p>Nombre : {{item.vNombre03 | MyCapitalize}}</p></li>
+                    <li><p>Apellido : {{item.vApellido03 | MyCapitalize1}}</p></li>
+                    <li><p>Tipo Cuenta : {{item.vTipoCuenta03 | lowercase}}</p></li>
+                    <li><p>Importe : {{item.vImporte03 | currency:'PEN S/ '}}</p></li>
+                    <li><p>Redondeado : {{item.vImporte03 | currency:'USD $ ':0}}</p></li>
+                    <li><p>Código : {{item.vCodigo03}}</p></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="container">Limitado por el importe
+            <div class="panel panel-default" style="box-shadow: 1px 1px 10px rgba(57,57,57,0.5);">
+                <ul class="btn-primary" ng-repeat="item in cc03.aUsuario03 | orderBy:'vImporte03' | limitTo:2:3">
+                    <li><p>Nombre : {{item.vNombre03 | MyCapitalize}}</p></li>
+                    <li><p>Apellido : {{item.vApellido03 | MyCapitalize1}}</p></li>
+                    <li><p>Tipo Cuenta : {{item.vTipoCuenta03 | lowercase}}</p></li>
+                    <li><p>Importe : {{item.vImporte03 | currency:'PEN S/ '}}</p></li>
+                    <li><p>Redondeado : {{item.vImporte03 | currency:'USD $ ':0}}</p></li>
+                    <li><p>Código : {{item.vCodigo03}}</p></li>
+                </ul>
+            </div>
+        </div>
+        
+    </body>
+</html>

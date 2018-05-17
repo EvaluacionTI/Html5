@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="myAppCartaFianza">
+    <head >
+        <title>:....[Evaluacion Angular 1.6.4]....:</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+        <link href="../jsBootStrap/bootstrap.min3.3.7.css" type="text/css" rel="stylesheet">
+        <script src="../jsAngular/angular.min1.6.4.js"></script>   
+        
+        <link href="../Css/20-CartaFianza/css0301v01AdjuntarArchivo.css" type="text/css" rel="stylesheet">
+        <script src="../30-jsAngular/20-CartaFianza/js0301v01AdjuntarArchivo.js"></script>
+    </head>
+    
+    <body ng-controller="myControladorAdjuntar">
+        <h3 id="idTitulo" class="FILA_TITULO_H3">....[Carta Fianza - Adjuntar Archivo]....</h3>
+        
+        <div class="FILA_TITULO_DIV">&nbsp;&nbsp;<i class="glyphicon glyphicon-align-justify"></i> Documentos </div>
+        
+        <div style="overflow: auto;">
+            <table class="table table-hover" style="min-width: 650px">
+                <thead>
+                    <tr><th>Documento</th>
+                        <th>Nombre</th>
+                        <th>Comentario</th>
+                        <th>Opciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="item in aDataCargada">
+                        <td><span class="frm_requerido">(*)</span>{{item.tipodocumento}}</td>
+                        <td><span>{{item.archivo}}</span>
+                            <span><input type="file"/>
+                                Formatos Soportados
+                            </span>
+                        </td>
+                        <td><span>{{item.comentario}}</span>
+                            <span><textarea class="form-control input-sm" maxlength="250"></textarea>
+                                <span class="textoAdicional">Caracteres escritos : - Cantidad M&aacute;xima : <b>250</b></span>
+                            </span>
+                        </td>
+                        <td><span>{{item.checked}}</span>
+                            <a class="btn btn-primary btn-sm"><i class="glyphicon glyphicon-save"></i>Descargar</a>
+                            <a class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-trash"></i>Eliminar</a>
+                            <a class="btn btn-success btn-sm"><i class="glyphicon glyphicon-open"></i>Cargar</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

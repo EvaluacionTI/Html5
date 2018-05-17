@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="MyAppEvaluacion">
+    <head>
+        <title>:....[Evaluacion Angular 1.6.4]....:</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../jsBootStrap/bootstrap.min3.3.7.css" type="text/css" rel="stylesheet">
+        <script src="../jsAngular/angular.min1.6.4.js" type="text/javascript"></script>
+
+        <link href="../Css/07-WorkingAngular/css0102v01Listener.css" type="text/css" rel="stylesheet"/>        
+        <script src="../30-jsAngular/07-WorkingAngular/js0102v01Listener.js"></script>
+    </head>
+    <body ng-controller="MyCtrlListener01 as cc01">
+
+        <h3 id="idTitulo" class="alert-success">....[Evaluación Angular - Ultimatix - Listener ]....</h3>
+        
+        <div class="form-control">
+            <p>
+                <input type="text" ng-model="cc01.Nombre11">
+            </p>
+        </div>
+        <hr>
+        <p>{{cc01.Nombre11}}</p>
+        <p>{{cc01.Mensaje11}}</p>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="myAppEvaluacion">
+    <head>
+        <title>:....[Evaluacion Angular 1.6.4]....:</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link type="text/css" rel="stylesheet" href="../jsBootStrap/bootstrap.min3.3.7.css">
+        <script type="text/javascript" src="../jsAngular/angular.min1.6.4.js"></script>
+        
+        <script type="text/javascript" src="../30-jsAngular/02-Directiva/js0514v01ng-FocusBlur.js"></script>
+    </head>
+
+    <body>
+        <h1 class="h1">Evaluación 1.6.4 - Directiva ng-Focus</h1>
+        <div class="panel-body" ng-controller="myCtrlFocus">
+            <label>Text input : </label>
+            <input type="text" ng-focus="focusHandler(1)" ng-blur="blurHandler(1)"/>
+            <br>
+            <label>Select : </label>
+            <select ng-focus="focusHandler(2)" ng-blur="blurHandler(2)">
+                <option>Opción 1</option>
+                <option>Opción 2</option>
+            </select>
+            <br>
+            <label>Text Area : </label>
+            <textarea ng-focus="focusHandler(3)" ng-blur="blurHandler(3)"></textarea>
+            <div>
+                <h3>Interaction History</h3>
+                <ul ng-repeat="itemInteraction in history">
+                    <li>{{itemInteraction}}</li>
+                </ul>
+            </div>
+            
+            
+            <button class="btn" ng-click="">Grabar</button>
+        </div>
+        
+    </body>
+</html>

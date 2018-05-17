@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head ng-app="myAppAjax" ng-controller="myApiCtrlAjax as rs">
+        <title>:....[Evaluacion Angular 1.6.4]....:</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../jsAngular/angular.min1.6.4.js"></script>
+        <style>
+            body{ font-family: sans-serif;}
+            li{
+                font-size: 0.8em;
+            }
+            li span{
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <h3 style="background-color: green; color: yellow; text-align: center">....[Evaluación Angular 1.6.4]....</h3>
+        <p>Selecciona:<br>
+            <select ng-model="rs.cboPaises" ng-change="rs.buscarEnRegion()">
+                <option value="http://restcountries.eu/rest/v1/region/africa">Africa</option>
+                <option value="http://restcountries.eu/rest/v1/region/europe">Europa</option>
+                <option value="http://restcountries.eu/rest/v1/region/americas">América</option>
+            </select>
+        </p>
+        <ul>
+            <li ng-repeat="pais in rs.paises">
+                País: <span>{{pais.name}}</span>, capital {{pais.capital}}
+            </li>
+        </ul>
+        
+        <script type="text/javascript">
+            var vApp = angular
+                    .module('myAppAjax', [])
+                    .controller('myApiCtrlAjax', ['$http', controladorPrincipal]);
+            
+            function controladorPrincipal($http){
+                var rs = this;
+                
+                rs.buscarEnRegion = function(){
+                  $http.get(rs.cboPaises).success(function(respuesta){
+                      rs.paises = respuesta;
+                  });
+                };
+            };
+        </script>
+        
+    </body>
+</html>
+
+

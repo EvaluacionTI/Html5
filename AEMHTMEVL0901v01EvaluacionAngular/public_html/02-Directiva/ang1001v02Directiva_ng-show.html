@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="appCartaFianza">
+    <head>
+        <title>:....[Evaluacion Angular 1.4.8]....:</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../jsAngular/angular.min1.6.4.js"></script>
+        <script src="../30-jsAngular/02-Directiva/js1001v02Directiva_ng-show.js"></script>
+    </head>
+    <body>
+        
+        <div ng-controller="myCtrlx">
+                        <input type="text" ng-model="vUsuario"/>
+
+                        <input type="password" ng-model="vPassword"/>
+
+                        <input type="checkbox" ng-model="vMostrar"/>
+                        <br>
+            
+            <br>
+            Check : {{vMostrar}}
+            
+            <hr>
+            <div ng-show="vMostrar==true">
+                Visualizando el valorado Carta Fianza<br>
+                Usuario : {{vUsuario + "  " + vPassword}}
+            </div>
+        </div>
+
+
+    </body>
+</html>

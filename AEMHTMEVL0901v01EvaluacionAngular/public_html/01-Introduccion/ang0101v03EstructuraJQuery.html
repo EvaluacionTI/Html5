@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>:....[Evaluacion Angular 1.2.23]....:</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div style="background-color: orange">....[Evaluación jQuery vs Angular]....</div>
+        <hr>
+        <form>
+            ¿Producto? <input type="text" id="vNombre">
+        </form>
+
+        <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+        <script>
+            $(function(){
+                var vCampoTexto = $("#vNombre");
+                var vTitular = $("h1");
+                vCampoTexto.on("keyup", function(){
+                    vTitular.text("Producto -----> " + vCampoTexto.val());
+                });
+            });
+        </script>
+    </body>
+</html>

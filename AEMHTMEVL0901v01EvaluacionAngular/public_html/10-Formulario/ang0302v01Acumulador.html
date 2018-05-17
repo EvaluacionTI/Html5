@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+
+        <title>:....[Evaluacion Angular 1.6.4]....:</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../jsAngular/angular.min1.6.4.js"></script>
+
+    </head>
+    <body>
+        <div style="background-color: orange; text-align: center">....[Evaluacion Angular 1.6.4]....</div>
+        <hr>
+        <div ng-app="myAppAcumulador" ng-controller="ctrlAcumulador as v">
+            Control de Operación<br>
+            ¿Cuanto?: <input type="text" ng-model="v.cuanto" size="4">
+            <br>
+            <input type="button" value = "+" ng-click="v.sumar()">
+            <input type="button" value = "-" ng-click="v.restar()">
+            <br>
+            <h5>Totales:</h5>
+            En el acumulador llevamos <span>{{v.total}}</span>
+        </div>
+        
+        
+        <script type="text/javascript">
+            var vApp = angular
+                    .module('myAppAcumulador', [])
+                    .controller('ctrlAcumulador', controller_main);
+            
+            function controller_main(){
+                var scope = this;
+                
+                scope.cuanto = 0;
+                scope.total = 0;
+                
+                scope.sumar = function(){
+                    scope.total += parseInt(scope.cuanto);
+                };
+                
+                scope.restar = function(){
+                    scope.total -= parseInt(scope.cuanto);
+                };
+            };
+            
+        </script>
+        
+    </body>
+</html>
+

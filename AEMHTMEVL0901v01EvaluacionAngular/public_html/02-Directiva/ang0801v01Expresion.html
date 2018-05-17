@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="MyApp">
+    <head>
+        <title>:....[Evaluacion Angular 1.6.4]....:</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../Css/css0101v03Introduccion.css" type="text/css" rel="stylesheet"/>
+        <script src="../jsAngular/angular.min1.6.4.js" type="text/javascript"></script>
+        <script src="../30-jsAngular/js0201v01Expresion.js"></script>
+    </head>
+    <body ng-controller="MyControlador">
+        <h3>....[Evaluación Angular 1.6.4]....</h3>
+        <hr>
+        <br>
+        <p>Concepto: Invocar a una funcion randow</p>
+        <br><br>
+        
+        Aleatorio cada 2000 milisegundos : {{randomValue}}
+        <br>
+        Los dos puntos previos a la variable indica que toma solo el primer valor evitando que cambie: {{::randomValue}}
+        <b><br>Mostrar la posición de un Arreglo[1]:</b>
+        {{fruta[1]}}
+        <b><br>Expresion que calcula precio por cantidad<br></b>
+        <table>
+            <tr><td>Nombre</td>
+                <td>Importe</td>
+            </tr>
+            <tr><td>{{fruta[2]}}</td>
+                <td>{{cantidad*costo}}</td>
+            </tr>
+        </table>
+        <b><br>Comparar valores > 50000<br></b>
+        {{randomValue > 50000}}
+        <br><br>
+        Ingrese el ancho: <input type="text" ng-model="ancho">
+        <p style="background-color: red; width: {{ancho}}px">
+            Párrafo dinámico
+        </p>
+        
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="spicyApp2">
+    <head>
+        <title>:....[Evaluacion Angular 1.6.4]....:</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link type="text/css" rel="stylesheet" href="../Css/css0401v01Controlador.css" />
+        <link rel="icon" type="image/png" href="../imagenes/icono/favicon.ico" >
+
+        <script type="text/javascript" src="../jsAngular/angular1.6.4.js"></script>
+        <script type="text/javascript" src="../30-jsAngular/04-Controlador/js0404v05ControladorArgumento.js"></script>
+    </head>
+    <body>
+        <div ng-controller="SpicyController2">
+            <input ng-model="customSpice">
+            <button ng-click="spicy('chili')">Chili</button>
+            <button ng-click="spicy(customSpice)">Custom spice</button>
+            <p>The food is {{spice}} spicy!</p>
+        </div>
+    </body>
+</html>

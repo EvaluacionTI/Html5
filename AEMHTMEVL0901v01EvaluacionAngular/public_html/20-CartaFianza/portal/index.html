@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="AppPortal">
+    <head>
+        <title>Nexo Financiero</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link type="text/css" rel="stylesheet" href="../../jsBootStrap/bootstrap.min0.13.1-0.css">
+        
+        <script type="text/javascript" src="../../jsJQuery/jquery-2.1.4.min.js"></script>        
+        <script type="text/javascript" src="../../jsAngular/angular.min.js" ></script>
+        <script type="text/javascript" src="../../jsAngular/angular-hotkeys.js"></script>
+
+        <script type="text/javascript" src="../../jsBootStrap/ui-bootstrap-tpls-0.13.1-0.js" ></script>
+        
+        <link type="text/css" rel="stylesheet" href="../../Css/20-CartaFianza/portal.css">
+        <script type="text/javascript" src="../../30-jsAngular/20-CartaFianza/coreComun-2.js"></script>
+        <script type="text/javascript" src="../../30-jsAngular/20-CartaFianza/controlador/core-2.js"></script>
+        <script type="text/javascript" src="../../30-jsAngular/20-CartaFianza/controlador/index.js"></script>
+    </head>
+    <body ng-controller="CtrlPrincipal">
+        <div style="min-width: 343px;">
+            <div class="ALERTA_CONTENEDOR" ng-show="alertaPortal.mensaje.length>0">
+                <table width='50%' align='center'>
+                    <tbody><tr><td class="ALERTA_DETALLE">
+                        <alert type="{{alertaPortal.tipo}}" close="alertaPortal.cerrar()">{{alertaPortal.mensaje}}</alert>
+                    </td></tr></tbody>
+                </table>
+            </div><div><header class="navbar navbar-default navbar-fixed-top" style="min-width: 343px;">
+                    <div class="navbar-inner fondoTop">
+                        <div class="container">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-3" ng-click="isCollapsed = !isCollapsed">
+                                    <span class="sr-only"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand visible-xs" ng-click="restaurarModulo(0)" style="padding-top: 6px;">Pulsa aquí
+                                    <img alt="" src="../../imagenes/20-CartaFianza/logo_portal_1.png">
+                                </a>
+                            </div>
+                            <nav class="hidden-xs">
+                                <ul class="nav navbar-nav">
+                                    <a href="index.html" role="button" ng-click="restaurarModulo(0)" class="navbar-brand" style="padding-top: 6px;">
+                                        <img alt="" src="../../imagenes/20-CartaFianza/logo_portal_1.png">
+                                    </a>
+                                    <li class="dropdown" dropdown="" ng-show="seccion === 'Detalle'">
+                                        <a role="button" class="dropdown-toggle" dropdown-toggle="" aria-haspopup="true" aria-expanded="false">
+                                            <i class="glyphicon glyphicon-book"></i> Módulos <b class="caret"></b>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li ng-repeat="modulo in data.modulos">
+                                                <a ng-click="cargarModulo($index)">
+                                                    <i ng-class="modulo.icono"></i> {{modulo.nombre}}
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul class="nav navbar-nav pull-right">
+                                    <li><div style="top: 16px; right:5px; position: relative;">
+                                            <i class="glyphicon glyphicon-time" tooltip="Tiempo Límite de Inactividad" tooltip-placement="bottom">
+                                                <progressbar class="progress-striped active" value="tiempo.contador"  tooltip="Tiempo Límite de Inactividad" tooltip-placement="bottom">
+                                                    <span style="background-color: #337ab7;">{{tiempo.mensaje}}</span>
+                                                </progressbar>
+                                            </i>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </nav>
+
+                        </div>
+                    </div>
+                </header>
+            </div>
+            <div style="height: 70px">70px</div>
+            <div class="container-fluid" ng-show="seccion === 'Modulos'">Modulos
+            </div>
+            <div class="container-fluid" ng-show="seccion === 'Detalle'">Detalle
+                <div ng-include="urlDetalle"></div>
+            </div>
+            <div class="container-fluid" ng-show="seccion === 'Perfil'">Perfil
+                <div ng-include="urlPerfil"></div>
+            </div>
+            <div ng-include="'../../20-CartaFianza/piepagina.html'">PiePagina</div>
+            <cargas-de></cargas-de>
+        </div>
+    </body>
+</html>

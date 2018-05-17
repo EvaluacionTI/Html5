@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="AppPortal">
+    <head>
+        <title>Nexo Financiero</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link type="text/css" rel="stylesheet" href="../jsBootStrap/bootstrap.min0.13.1-0.css">
+        
+        <script type="text/javascript" src="../jsJQuery/jquery-2.1.4.min.js"></script>        
+        <script type="text/javascript" src="../jsAngular/angular.min.js" ></script>
+        <script type="text/javascript" src="../jsAngular/angular-hotkeys.js"></script>
+
+        <script type="text/javascript" src="../jsBootStrap/ui-bootstrap-tpls-0.13.1-0.js" ></script>
+        
+        <link type="text/css" rel="stylesheet" href="../Css/20-CartaFianza/portal.css">
+        <script type="text/javascript" src="../30-jsAngular/11-FormularioBootStrap/coreComun-2.js"></script>
+        <script type="text/javascript" src="../30-jsAngular/11-FormularioBootStrap/js0103v01Navegacion.js"></script>
+    </head>
+    <body ng-controller="CtrlNavegacion">
+        <h3 id="idTitulo" class="alert-success">....[Evaluación BootStrap - Navegación ]....</h3>
+        
+        <div style="min-width: 450px; background-color: grey">Div 1
+            <div style="background-color: green">Div 2
+                <header class="navbar navbar-default navbar-fixed-top" style="min-width: 343px;">header: navbar-fixed-top
+                    <div class="navbar-inner fondoTop">Div 3 fondoTop: Color amarillo
+                        <div class="container">Div 4 | Container | 
+                            <div class="navbar-header">Div 5 | navbar-header |
+                                <!--     -->
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-3" ng-click="isCollapsed = !isCollapsed">Botones
+                                    <span class="sr-only">1</span>
+                                    <span class="icon-bar">2</span>
+                                    <span class="icon-bar">3</span>
+                                    <span class="icon-bar">4</span>
+                                </button>
+                                <!-- visible-xs   > -->
+                                <a class="navbar-brand" style="padding-top: 6px;" ng-click="restaurarModulo(0)">Pulsa Aquí
+                                    <img alt="" src="../imagenes/20-CartaFianza/logo_portal_1.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </div>
+        </div>
+        Compatibilidad {{compatiblidad}}<br>
+        Año : {{anho}}<br>
+        Sección : {{seccion}}<br>
+        URL : {{urlDetalle}}<br>
+        detalle: {{restaurarModulo.urlDetalle}}
+    </body>
+</html>

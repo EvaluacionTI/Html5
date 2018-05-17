@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="myAppCartaFianza">
+    <head>
+        <title>:....[Evaluacion Angular 1.6.4]....:</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../jsAngular/angular.min1.6.4.js"></script>
+    </head>
+    <body>
+        <div style="background-color: orange; text-align: center">....[Evaluación Angular vs jQuery]....</div>
+        <hr>
+        
+        <div>
+            <table>
+                <tr><td>Producto 
+                        <input type="text" ng-model="vProducto"/>
+                    </td>
+                </tr>
+                <tr><td>Tipo de Proceso
+                        <select ng-model="vCboTipoProceso">
+                            <option value="Emisión">Emisión</option>
+                            <option value="Modificación">Modificación</option>
+                            <option value="Renovación">Renovación</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+        {{vProducto}} - {{vCboTipoProceso}}
+    </body>    
+
+</html>

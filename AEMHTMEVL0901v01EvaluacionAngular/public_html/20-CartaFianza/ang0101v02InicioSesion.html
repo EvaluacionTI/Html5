@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+
+
+OJO : el nombre de la aplicación no se inicia en el head, lo que implicará que no cargue angular en html
+OJO : el nombre de la aplicación no se inicia en el head, lo que implicará que no cargue angular en html
+OJO : el nombre de la aplicación no se inicia en el head, lo que implicará que no cargue angular en html
+OJO : el nombre de la aplicación no se inicia en el head, lo que implicará que no cargue angular en html
+OJO : el nombre de la aplicación no se inicia en el head, lo que implicará que no cargue angular en html
+
+-->
+<html>
+    <head ng-app="myAppCartaFianza">
+        <title>:....[Evaluacion Angular 1.6.4]....:</title>
+        <meta charset="UTF-8">
+        <link href="../jsBootStrap/bootstrap.min3.3.7.css" type="text/css" rel="stylesheet">
+        <!-- <script src="../jsAngular/angular.min1.6.4.js"></script> -->
+
+        <link href="../Css/20-CartaFianza/css0101v01InicioSesion.css" type="text/css" rel="stylesheet">        
+        <script src="../30-jsAngular/20-CartaFianza/js0101v02InicioSesion.js"></script>
+        
+    </head>
+    <body ng-controller="myCtrlInicioSesion">
+        <h3 id="idTitulo" class="FILA_TITULO_H3">....[Carta Fianza - Inicio Sesión]....</h3>
+         
+        <form id="idFrmInicioSesion" name="vFrmInicioSesion" method="POST" action="j_security_check">
+
+            <div class="fondoTop LOGEO_TOP"><img alt="" src="../imagenes/20-CartaFianza/logo_financiero_1.png" /></div>
+            
+            <div id="idIniciarSesionDiv" style="position:fixed">
+                <table class="TABLE_SUPERIOR">
+                    <tr>
+                        <td><table class="TABLE_MEDIO">
+                                <tr><!-- Los class con de bootstrap -->
+                                    <td><div class="panel panel-default" style="box-shadow: 1px 1px 10px rgba(27,27,27,0.2);">
+                                            <div class="panel-heading"><img alt="" src="../imagenes/20-CartaFianza/logo_portal_2.png" /></div>
+                                            <table class="table">
+                                                <tr><td><strong>Usuario</strong></td>
+                                                    <td><input type="text" class="form-control" id="vUsuario" ng-model="vUsuario"></td>
+                                                </tr>
+                                                <tr><td>Password</td>
+                                                    <td><input type="password" class="form-control" id="vClave" ng-model="vClave"></td>
+                                                </tr>
+                                                <tr><td colspan="2" align="Center">
+                                                        <a class="btn btn-primary" id="btnIniciar" ng-click="iniciar()">
+                                                        <i id="idAcceder" class="glyphicon glyphicon-play"></i>Iniciar sesión</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr ng-show="vUsuario.length>0">
+                                    <td>{{vUsuario}}</td>
+                                    <td>Fecha: {{vFechaSistema}}</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                
+            </div>
+        </form>
+    </body>
+</html>

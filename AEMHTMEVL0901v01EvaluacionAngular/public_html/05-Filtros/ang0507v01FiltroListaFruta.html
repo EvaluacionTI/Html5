@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="MyAppEvaluacion">
+    <head>
+        <title>:....[Evaluacion Angular 1.6.4]....:</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="../jsBootStrap/bootstrap.min3.3.7.css" type="text/css" rel="stylesheet">
+        <script src="../jsAngular/angular.min1.6.4.js" type="text/javascript"></script>
+        
+        <link href="../Css/01-Introduccion/css0103v03FuncionScope.css" type="text/css" rel="stylesheet"/>
+        <script src="../30-jsAngular/01-Introduccion/js0104v01FuncionScopeApp.js"></script>
+        <script src="../30-jsAngular/05-Filtros/js0507v01FiltroListaFruta.js"></script>
+    </head>
+    
+    <body>
+        <h3 class="h3">....[Evaluación Angular 1.6.4]....</h3>
+        <br>
+        <div ng-controller="MyCtrlListaFruta">
+            
+            <h4>{{detalle}}</h4>
+            <ul ng-repeat="item in aListaFruta">
+                <li>Nombre Fruta : {{item.nombre | uppercase}}</li>
+                <li>Precio Compra : {{item.precioCompra | currency }}</li>
+                <li>Precio Venta : {{item.precioVenta | currency}}</li>
+                <li>Fecha especial : {{item.diaEspecial| lowercase}}</li>
+            </ul>
+        </div>
+
+    </body>
+</html>

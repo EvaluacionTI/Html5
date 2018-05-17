@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>:....[Evaluacion Angular 1.4.8]....:</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../jsBootStrap/bootstrap.min3.3.7.css" type="text/css" rel="stylesheet">
+        <script src="../jsAngular/angular.min1.6.4.js"></script>
+        
+        <link href="../Css/20-CartaFianza/css0101v01InicioSesion.css" type="text/css" rel="stylesheet">
+        <script src="../30-jsAngular/20-CartaFianza/js0101v04InicioSesion.js" ></script>
+    </head>
+
+    <body ng-app="appCartaFianza" ng-controller="myCtrl">
+        
+        <h3 id="idTitulo" class="FILA_TITULO_H3">....[Carta Fianza - Inicio Sesión]....</h3>
+
+        <form id="idIniciarSesion" name="vFrmInicioSesion" method="POST" action="j_security_check">
+
+            <div class="fondoTop LOGEO_TOP"><img alt="" src="../imagenes/20-CartaFianza/logo_financiero_1.png" /></div>
+            <div id="idIniciarSesionDiv">
+                <table class="TABLE_SUPERIOR">
+                    <tr><td align="center">
+                        <table class="TABLE_MEDIO">
+                            <tr><td  align="center">
+                                    <div class="panel panel-default" style="box-shadow: 1px 1px 10px rgba(57,57,57,0.5);">
+                                    <div class="panel-heading"><img alt="" src="../imagenes/20-CartaFianza/logo_portal_2.png" /></div>
+                                    <table class="table">
+                                        <tr>
+                                            <td><strong>Usuario</strong></td>
+                                            <td><input type="text" class="form-control" id="idUsuario"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Password</td>
+                                            <td><input type="password" class="form-control" id="idClave"/></td>
+                                        </tr>
+                                        <tr><td colspan="2" align="Center">
+                                                <a class="btn btn-primary" id="idBtnIniciar" ng-click="iniciar()">
+                                                <i class="glyphicon glyphicon-play"></i>Iniciar sesión</a>
+                                            </td>
+                                         </tr>
+                                    </table>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+        <div>
+            {{vUsuario + "  " + vClave}}
+            <br>
+            {{vFechaSistema}}
+        </div>
+    </body>
+</html>

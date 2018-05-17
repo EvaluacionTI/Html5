@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="MyApp">
+    <head>
+        <title>:....[Evaluacion Angular 1.6.4]....:</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../Css/css0401v01Controlador.css" type="text/css" rel="stylesheet"/>
+        
+        <script src="../jsAngular/angular.min1.6.4.js" type="text/javascript"></script>
+        <script src="../30-jsAngular/js0403v01ControladorSintaxis.js"></script>
+    </head>
+    <body>
+        <div ng-controller="MyControladorSintaxis01">
+            
+            <p>Padre controlador: {{mensaje01}}</p>
+
+            <div  ng-controller="MyControladorSintaxis02">
+                <br>
+                <p>Primer Hijo controlador: {{mensaje02}}</p>
+            </div>
+            <div ng-controller="MyControladorSintaxis03">
+                <p>Segundo Hijo controlador: {{mensaje03}}</p>
+            </div>
+        </div>
+
+    </body>
+</html>

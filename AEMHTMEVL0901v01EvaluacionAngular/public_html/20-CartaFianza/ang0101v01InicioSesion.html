@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head ng-app="myAppCartaFianza">
+        <title>:....[Evaluacion Angular 1.6.4]....:</title>
+        <meta charset="UTF-8">
+        <link href="../jsBootStrap/bootstrap.min3.3.7.css" type="text/css" rel="stylesheet">
+        <script src="../jsAngular/angular.min1.6.4.js"></script>         
+
+        <link href="../Css/20-CartaFianza/css0601v01AdjunarArchivo.css" type="text/css" rel="stylesheet">        
+    </head>
+    <body ng-controller="xx">
+         <h3 id="idTitulo" class="FILA_TITULO_H3">....[Carta Fianza - Adjuntar Archivo]....</h3>
+         
+         <div class="glyphicon-arrow-down   ">Inicio Sesión
+        <table class="table">
+            <tr><td>Usuario</td>
+                <td><input type="text" ng-model="vUsuario"></td>
+            </tr>
+            <tr><td>Password</td>
+                <td><input type="text" ng-model="vClave"></td>
+            </tr>
+            <tr><td colspan="2"><input type="submit" value="Iniciar" ng-submit="vIniciar"></td>
+            </tr>
+        </table></div>
+         <p>{{vUsuario}}</p>
+         
+    </body>
+</html>

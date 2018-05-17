@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="MyAppEvaluacion">
+    <head>
+        <title>:....[Evaluacion Angular 1.6.4]....:</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../jsBootStrap/bootstrap.min3.3.7.css" type="text/css" rel="stylesheet">
+        <script src="../jsAngular/angular.min1.6.4.js" type="text/javascript"></script>
+
+        <link href="../Css/05-Filtros/css0505v01FiltroFecha.css" type="text/css" rel="stylesheet"/>        
+        <script src="../30-jsAngular/05-Filtros/js0505v01FiltroFecha.js"></script>
+    </head>
+    <body ng-controller="MyControladorFiltro05 as cc05">
+
+        <h3 id="idTitulo" class="alert-info">....[Evaluación Angular - Ultimatix - Filtro Fecha ]....</h3>
+        
+        <div class="container">Filtro de fecha : {{cc05.vFechaSistema05}}
+            <div class="panel panel-default" style="box-shadow: 1px 1px 10px rgba(57,57,57,0.5);">
+                <ul class="alert-warning">
+                    <li>Fecha Sistema: {{cc05.vFechaSistema05}}</li>
+                    <li>Fecha mmddyy{{cc05.aUsuario05.vFechaInicio05 | date:'short'}}</li>
+                    <li>{{cc05.aUsuario05.vFechaFin05}}</li>
+                    <li>{{cc05.aUsuario05.vFechaInicio05 | date:'medium'}}</li>
+                    <li>Año : {{cc05.aUsuario05.vFechaInicio05 | date:'yyyy'}}</li>
+                    <li>Mes :{{cc05.aUsuario05.vFechaInicio05 | date:'MM'}}</li>
+                    <li>Día :{{cc05.aUsuario05.vFechaInicio05 | date:'dd'}}</li>
+                    <li>Fecha mm/dd/yy :{{cc05.aUsuario05.vFechaInicio05 | date:'shortDate'}}</li>
+                    <li>Fecha dd mes año :{{cc05.aUsuario05.vFechaInicio05 | date:'dd MMMM, yyyy'}}</li>
+                </ul>
+            </div>
+        </div>
+        
+    </body>
+</html>

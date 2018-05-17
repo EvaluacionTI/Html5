@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="appCartaFianza">
+    <head>
+        <title>:....[Evaluacion Angular 1.4.8]....:</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../jsAngular/angular.min1.6.4.js"></script>
+    </head>
+    <body>
+        <div style="background-color: orange; text-align: center">....[Evaluacion Angular 1.4.8]....</div>
+        <hr>
+        
+        Definir controlador Forma N° 01<br>
+        <div ng-controller="myCtrl">
+            <form id="idIniciarSesion" action="">
+                <table>
+                    <tr>
+                        <td>Usuario </td>
+                        <td><input type="text" ng-model="vUsuario"/></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td><input type="password" ng-model="vPassword"/></td>
+                    </tr>
+
+                </table>
+            </form>
+ 
+            {{vUsuario + "  " + vPassword}}
+        </div>
+
+        <script type="text/javascript">
+            var vApp = angular.module('appCartaFianza', []);
+            
+            vApp.controller('myCtrl', function($scope){
+                $scope.vUsuario = "Carta";
+                $scope.vPassword = "Fianza";
+            });
+            
+        </script>
+    </body>
+</html>
