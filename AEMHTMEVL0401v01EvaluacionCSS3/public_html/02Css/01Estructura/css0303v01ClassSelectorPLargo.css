@@ -1,0 +1,33 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 07/03/2017, 04:17:01 PM
+    Author     : ALEDIA
+*/
+/*
+    Selector        Declaración         Declaración
+
+        h1              {color: blue;        font-size: 12px;}
+
+                            property    value   property    value
+
+*/
+.centrado{
+    color:orange;
+    text-align: center;
+}
+
+/*
+    Este es solo para el selector P
+*/
+p.centrado{
+    color:brown;
+    text-align: justify;
+}
+
+p.largo{
+    font-size: 300%;
+}

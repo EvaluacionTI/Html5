@@ -1,0 +1,22 @@
+/* 
+    Created on : 07/03/2017, 04:17:01 PM
+    Author     : ALEDIA
+*/
+body{
+    background-color: lightblue;
+}
+h1{
+    color:blue;
+    text-align: center;
+}
+
+h2{
+    color:brown;
+    text-align: right;
+}
+
+p{
+    text-align: justify;
+    font-size: 100%;
+    color:blueviolet;
+}
